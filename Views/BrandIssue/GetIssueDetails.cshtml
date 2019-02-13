@@ -1,0 +1,616 @@
+﻿@{
+    ViewBag.Title = "GetDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .modal-dialog {
+    }
+
+    #hdIssue {
+        background-color: red;
+    }
+
+    .panel-title {
+        font-size: 25px;
+    }
+
+    p {
+        color: black;
+        font-size: 20px;
+    }
+
+    /*a {
+        font-size: 25px;
+    }*/
+
+    .img-responsive {
+        cursor: zoom-in;
+    }
+</style>
+
+<div class="container" style="">
+    <div class="page-header">
+        <h1>Monitoring Issue Details</h1>
+    </div>
+
+
+    <div class="row user-menu-container square">
+
+        <div class=" col-md-5 user-details">
+            <div class="container" style="text-align: center;">
+                <div class="page-header">
+                    <h2> Details</h2>
+                </div>
+
+            </div>
+            @foreach (var items in ViewBag.BrandIssue)
+            {
+
+
+                <div class="row" style="padding: 5px; ">
+
+
+                    <div class="col-md-12 form-group ">
+
+                        @*<span class="label label-danger" id="hdIssue" style="font-size: 25px; width:auto;">Branding Issue No: <span id="hdIssueId">@items.IssueId</span></span>*@
+
+                        <div class="bs-example">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            Issue Token : <a data-toggle="collapse" id="hdIssueId" data-parent="#accordion" href=""> @items.IssueId</a>
+                                        </h4>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="bs-example">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="">Brand Category : @items.BrandCategory</a>
+                                        </h4>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="bs-example">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="">Brand Sub Category : @items.BrandSubCategory</a>
+                                        </h4>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="bs-example">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="">Retailers Address : @items.RetailerAddress</a>
+                                        </h4>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="bs-example">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="">Retailers Phone : @items.RetailerPhone</a>
+                                        </h4>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="bs-example">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="">Monitoring Issues</a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <p>@items.Description</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-lg btn-labeled btn-success pull-left btnComplete" id="btnComplete">
+                                <span class="btn-label"><i class="fa fa-pencil "></i></span>Completed
+                            </button>
+
+
+                            <button type="button" class="btn btn-lg btn-labeled btn-danger pull-left btnRemove" id="btnRemove">
+                                <span class="btn-label"><i class="fa fa-pencil"></i></span>Move To Trash
+                            </button>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    &nbsp;
+                </div>
+
+
+            }
+        </div>
+
+        <div class=" col-md-1 user-details">
+
+        </div>
+
+        <div class=" col-md-6 user-details" style=" ">
+
+            <div class="container" style="text-align: center;">
+                <div class="page-header">
+                    <h2> Attachments</h2>
+                </div>
+
+            </div>
+
+            <div class="row" id="top">
+                @foreach (var items in ViewBag.Datas)
+                {
+
+
+
+
+
+                    <div class="col-md-4 no-pad">
+                        <div class="user-image">
+                            <div class="file-preview-thumbnails">
+                                <div class="container">
+                                    <div class="file-preview-frame file-preview-initial" id="preview-1475130072371-init_0" data-fileindex="init_0" data-template="image">
+
+                                        @if (items.FileExtension == ".jpg" || items.FileExtension == ".png" || items.FileExtension == ".jpeg")
+                                        {
+
+                                            <img src="@items.IssueFile" class=" file-preview-image img-responsive" title="" alt="" style="width:300px;height:200px;" />
+                                            @*<img src="@items.id" class=" file-preview-image img-responsive" title="" alt="" style="width:auto;height:160px;" />*@
+
+                                        }
+                                        else if (items.FileExtension == ".pdf")
+                                        {
+
+                                            <embed class="" id="filePath" src="@items.IssueFile" width="300px" height="200px" type="application/pdf" />
+
+                                        }
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                }
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="filePreviewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Preview</h4>
+                <h4 class="modal-title" id="btnModalDataChangeLabel" style="display:none">Modal title</h4>
+            </div>
+            <div class="modal-body" id="modelBody" style="overflow: auto">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ModalBrandIssues" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Branding Issues</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="x_panel">
+
+                            <div class="form-horizontal form-label-left input_mask">
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label"> Issue Id</label>
+                                    <div class="col-sm-7" id="">
+                                        <input id="txtModalIssuesId" type="text" maxlength="100" placeholder="Id" required="" class="form-control form-control-success">
+
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Remarks</label>
+                                    <div class="col-sm-7" id="">
+                                        <input id="txtModalIssuesRemarks" type="text" maxlength="100" placeholder="Remarks" required="" class="form-control form-control-success">
+
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Steps</label>
+                                    <div class="col-sm-7" id="">
+                                        <input id="txtModalIssuesSteps" type="text" maxlength="100" placeholder="Steps" required="" class="form-control form-control-success">
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Status</label>
+                                    <div class="col-sm-7" id="">
+                                        <input id="txtStatus" type="text" maxlength="100" placeholder="status" required="" class="form-control form-control-success">
+
+
+                                    </div>
+
+                                </div>
+
+
+                                @*<div class="form-group">
+                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+
+
+                                            <input type="submit" id="btnModalUpdate" value="Update" class="btn btn-success">
+                                        </div>
+                                    </div>*@
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" id="btnModalUpdate">Complete</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<link href="~/Plugins/vendors/fileInput/fileinput.css" rel="stylesheet" />
+<link href="~/Plugins/vendors/ImageLoader/image.css" rel="stylesheet" />
+<link href="~/Plugins/vendors/izitoast/iziToast.min.css" rel="stylesheet" />
+<script src="~/Plugins/vendors/izitoast/iziToast.min.js"></script>
+<script src="~/Plugins/vendors/jquery/dist/jquery.js"></script>
+<script src="~/Plugins/vendors/fileInput/fileinput.js"></script>
+<script src="~/Plugins/vendors/ImageLoader/image.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+    });
+
+
+    $(document).on('click', '.btnComplete', function () {
+        debugger;
+
+        var issueId = $('#hdIssueId').html();
+
+        $("#txtModalIssuesId").val(issueId);
+        $("#txtStatus").val('Completed');
+
+
+        $("#ModalBrandIssues").modal('show');
+        //alert(issueId);
+
+
+    });
+
+    $(document).on('click', '.btnRemove', function () {
+        debugger;
+
+        var issueId = $(this).closest('.user-details').find('#hdIssueId').html();
+
+
+        var brandingIssue = {};
+
+        brandingIssue.IssueId = issueId;
+        var status = "Trash";
+
+
+        iziToast.show({
+            theme: 'dark',
+            icon: 'icon-person',
+            timeout: 3000,
+            title: 'Wait!!',
+            imageWidth: 150,
+            message: 'Are You SureMove This Issue To Trash??',
+            position: 'center',
+            layout: 1,
+            messageSize: 15,
+            progressBarColor: 'rgb(0, 255, 184)',
+            buttons: [
+                ['<button>Ok</button>', function (instance, toast) {
+                    //iziToast.info({
+                    //    title: 'Uploading',
+                    //    message: 'Uploading Started!',
+                    //});
+
+
+                    $.ajax({
+                        url: '@Url.Action("InsertBrandingIssueSolvedInfo", "BrandingIssueSolved")',
+                        type: 'Post',
+                        data: JSON.stringify({ brandingIssue: brandingIssue, status: status }),
+                        dataType: 'json',
+                        async: false,
+                        contentType: 'application/json',
+                        success: function (data) {
+
+
+                            if (data.IsSuccess) {
+                                iziToast.success({
+                                    timeout: 2000,
+                                    imageWidth: 150,
+                                    position: 'center',
+                                    title: 'Success',
+                                    message: 'Activated Successfully '
+                                });
+
+
+                                setTimeout(function () {
+                                    window.location.href = "@Url.Action("BrandIssuedView", "BrandIssue")";
+                                }, 3000);
+
+
+                            } else {
+                                iziToast.error({
+                                    timeout: 2000,
+                                    imageWidth: 150,
+                                    position: 'center',
+                                    title: 'Error',
+                                    message: data.Message
+                                });
+
+
+                                return false;
+                            }
+
+
+                        },
+                        error: function (result) {
+                            iziToast.error({
+                                timeout: 2000,
+                                imageWidth: 150,
+                                position: 'center',
+                                title: 'Error',
+                                message: result
+                            });
+
+                            return false;
+                        }
+                    });
+
+
+
+
+
+                }, true], // true to focus
+                ['<button>Close</button>', function (instance, toast) {
+                    instance.hide({
+                        transitionOut: 'fadeOutUp',
+                        onClosing: function (instance, toast, closedBy) {
+                            console.info('closedBy: ' + closedBy); // The return will be: 'closedBy: buttonName'
+                        }
+                    }, toast, 'buttonName');
+                }]
+            ],
+            onOpening: function (instance, toast) {
+                console.info('callback abriu!');
+            },
+            onClosing: function (instance, toast, closedBy) {
+                console.info('closedBy: ' + closedBy); // tells if it was closed by 'drag' or 'button'
+            }
+        });
+
+
+    });
+
+    $(document).on('click', '.btnpause', function () {
+        debugger;
+        alert("Okat");
+        var issueId = $(this).closest('.user-details').find('#hdIssueId').html();
+        $("#txtModalIssuesId").val(issueId);
+        $("#txtStatus").val('Pause');
+        $("#ModalBrandIssues").modal('show');
+        //alert(issueId);
+
+
+    });
+
+
+    $(".img-responsive").on('click', function () {
+        var img = $(this).attr('src');
+        var modalData = "";
+
+        $('#filePreviewModal').modal();
+
+        modalData += '<embed src="' + img + '" style="width:700px; height:500px;" frameborder="0"></embed>';
+        document.getElementById("modelBody").innerHTML = modalData;
+        $('#filePreviewModal').modal();
+    });
+
+    $("#btnModalUpdate").click(function () {
+
+        debugger;
+
+        if ($("#txtModalIssuesRemarks").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Remarks Required'
+            });
+            return false;
+
+        } else if ($("#txtModalIssuesSteps").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Steps Required'
+            });
+            return false;
+        } else {
+            var brandingIssue = {};
+
+            brandingIssue.IssueId = $("#txtModalIssuesId").val().trim();
+            brandingIssue.Remarks = $("#txtModalIssuesRemarks").val().trim();
+            brandingIssue.Solutions = $("#txtModalIssuesSteps").val().trim();
+
+
+            //console.log(brandingIssue);
+
+            var status = $("#txtStatus").val();
+        }
+        debugger;
+        $.ajax({
+            url: '@Url.Action("InsertBrandingIssueSolvedInfo", "BrandingIssueSolved")',
+            type: 'Post',
+            data: JSON.stringify({ brandingIssue: brandingIssue, status: status }),
+            dataType: 'json',
+            async: false,
+            contentType: 'application/json',
+            success: function (data) {
+
+
+                if (data.IsSuccess) {
+                    iziToast.success({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Success',
+                        message: 'Information Saved Successfully'
+                    });
+
+                    setTimeout(function () {
+                        window.location.href = "@Url.Action("BrandIssuedView", "BrandIssue")";
+                    }, 5000);
+
+                } else {
+                    iziToast.error({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Error',
+                        message: data.Message
+                    });
+
+
+                    return false;
+                }
+
+
+            },
+            error: function (result) {
+                iziToast.error({
+                    timeout: 2000,
+                    imageWidth: 150,
+                    position: 'center',
+                    title: 'Error',
+                    message: result
+                });
+
+                return false;
+            }
+        });
+    });
+
+
+    //function Clear() {
+    //    $('#txtModalIssuesId').val('');
+    //    $('#txtModalIssuesRemarks').val('');
+    //    $('#txtModalIssuesSteps').val('');
+    //    $(document).ready(function () {
+    //        reload();
+    //    });
+
+    //}
+
+</script>
+
+
+
+
+

@@ -1,0 +1,340 @@
+﻿
+@{
+    ViewBag.Title = "CreateAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-10 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Brand Outlet Monitoring</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">Settings 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <div class="form-horizontal form-label-left input_mask">
+
+
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Full Name</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtFullName" type="text" maxlength="11" placeholder="Type Full Name" required="" class="form-control form-control-success">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">User Name</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtUserName" type="text" maxlength="11" placeholder="Type User Name" required="" class="form-control form-control-success">
+
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Password</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtpassword" type="password" maxlength="11" placeholder="Type Password" required="" class="form-control form-control-success">
+                    
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Re-Type Password</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtReTypePassword" type="password" maxlength="11" placeholder="Re-Type Password" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>
+                    <p id="Pass"></p>
+                  
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Email</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtemail" type="email" maxlength="11" placeholder="Type Email" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Mobile</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtMobile" type="number" maxlength="11" placeholder="Type Mobile Number" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Address</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtAddress" type="text" maxlength="11" placeholder="Type Address" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                            @*<button type="button" class="btn btn-primary">Cancel</button>*@
+                            <button class="btn btn-primary" type="reset">Reset</button>
+                            <input type="button" id="btnSave" value="Submit" class="btn btn-success">
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<link href="~/Plugins/vendors/izitoast/iziToast.min.css" rel="stylesheet" />
+<script src="~/Plugins/vendors/jquery/dist/jquery.min.js"></script>
+<script src="~/Plugins/vendors/izitoast/iziToast.min.js"></script>
+
+
+
+
+<script>
+
+    //$(document).ready(function () {
+    //    $("#txtReTypePassword").keyup(valid);
+    //});
+
+    //var password1 = $("#txtpassword").val();
+    //var password2 = $("#txtReTypePassword").val();
+
+
+    //function valid() {
+    //    var password1 = $("#txtpassword").val();
+    //    var password2 = $("#txtReTypePassword").val();
+
+    //    if (password1 == password2) {
+    //        //alert("Password Match");
+    //        iziToast.warning({
+    //                    timeout: 1000,
+    //                    imageWidth: 150,
+    //                    position: 'center',
+    //                    title: 'Warning',
+    //                    message: 'Password Match'
+    //        });
+    //        return false;
+    //    }
+    //    else {
+    //        //alert("Password Not Match");
+    //        iziToast.warning({
+    //            timeout: 1000,
+    //            imageWidth: 150,
+    //            position: 'center',
+    //            title: 'Warning',
+    //            message: 'Password Not Match'
+    //        });
+    //    }
+    //    return true;
+    //}
+
+    $('#txtFullName').focus();
+
+    $("#btnSave").click(function () {
+
+        debugger;
+
+        if ($("#txtFullName").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Full Name Required'
+            });
+            return false;
+
+        } else if ($("#txtUserName").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'User Name Required'
+            });
+            return false;
+        } 
+ else if ($("#txtpassword").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Password Required'
+            });
+            return false;
+        }
+    else
+     if ($("#txtReTypePassword").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Password not match'
+            });
+            return false;
+           }
+            else if ($("#txtemail").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Email Required'
+            });
+            return false;
+        }
+        else if ($("#txtMobile").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Mobile Number Required'
+            });
+            return false;
+        } else if ($("#txtAddress").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Address Required'
+            });
+            return false;
+        }
+
+        else {
+            var createAccount = {};
+
+            createAccount.FullName = $("#txtFullName").val();
+            createAccount.UserName = $("#txtUserName").val();
+            createAccount.Password = $("#txtpassword").val();
+            createAccount.ReTypePassword = $("#txtReTypePassword").val();
+            createAccount.Email = $("#txtemail").val();
+            createAccount.Mobile = $("#txtMobile").val();
+            createAccount.Address = $("#txtAddress").val();
+
+
+            console.log(createAccount);
+
+            //alert("Data Saved");
+        }
+        debugger;
+        $.ajax({
+            url: '@Url.Action("InsertCreateAccountInfo", "Brand")',
+            type: 'Post',
+            data: JSON.stringify({ accountInfo: createAccount }),
+            dataType: 'json',
+            async: false,
+            contentType: 'application/json',
+            success: function (data) {
+
+               
+                if (data.IsSuccess) {
+                    iziToast.success({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Success',
+                        message: 'Information Saved Successfully'
+                    });
+
+                    clear();
+                    return true;
+                }
+                else {
+                    iziToast.error({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Error',
+                        message: data.Message
+                    });
+
+                    clear();
+                    return false;
+                }
+
+
+            },
+            error: function (result) {
+                iziToast.error({
+                    timeout: 2000,
+                    imageWidth: 150,
+                    position: 'center',
+                    title: 'Error',
+                    message: result
+                });
+                clear();
+                return false;
+            }
+
+        });
+    });
+
+    function clear() {
+
+        $('#txtFullName').val('');
+        $('#txtUserName').val('');
+        $('#txtpassword').val('');
+        $('#txtReTypePassword').val('');
+        $('#txtemail').val('');
+        $('#txtMobile').val('');
+        $('#txtAddress').val('');
+        $('#txtFullName').focus();
+    }
+
+
+</script>

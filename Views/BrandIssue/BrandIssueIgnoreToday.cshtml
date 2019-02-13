@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewBag.Title = "BrandIssueIgnoreToday";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<style>
+    table.dataTable thead tr {
+        background-color: darkslategray;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+
+    table.dataTable tbody tr {
+        color: #2F4F4F;
+        font-weight: bold;
+    }
+</style>
+
+<div class="container" style="text-align: center;">
+    <div class="page-header">
+        <h1>Previous Brand Monitoring Issues</h1>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+        <div class="x_panel">
+
+            <div class="x_content">
+                <br />
+                <div class="form-horizontal form-label-left input_mask">
+
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+
+                                <div class="x_content">
+
+                                    <table id="tblBrandIssuedDatatable" style="color: black" class="table table-striped table-bordered">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th> Category</th>
+                                                <th> Sub Category</th>
+                                                <th> Mobile</th>
+                                                <th> Address</th>
+                                                <th>Description</th>
+                                                <th>Details</th>
+
+
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody class="tbody" style="color: black"></tbody>
+
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="~/Plugins/vendors/Datatables/jquery.dataTables-1.10.9.css" rel="stylesheet" />
+<script src="~/Plugins/vendors/jquery/dist/jquery.min.js"></script>
+<script src="~/Plugins/vendors/Datatables/jquery.dataTable-1.10.9.min.js"></script>
+
+
+<script>
+
+
+    $(document).ready(function () {
+        loadData();
+
+    });
+
+    function loadData() {
+        debugger;
+
+
+        var table = $('#tblBrandIssuedDatatable').DataTable({
+            "ajax": {
+                "url": "@Url.Action("GetBrandIssueBeforeDetails", "BrandIssue")",
+                "type": "GET",
+                "datatype": "json"
+            },
+            "destroy": true,
+            "columnDefs":
+            [{
+                    "targets": [0],
+                    "searchable": true,
+                    "visible": false
+                },
+                { "width": "10%", "targets": 1 }
+            ],
+            "pageLength": 10,
+           
+            "dom": 'Bfrtip',
+
+            "columns": [
+                { "data": "IssueId", "autoWidth": true, "searchable": true },
+                { "data": "BrandCategory", "autoWidth": true, "searchable": true },
+                { "data": "BrandSubCategory", "autoWidth": true, "searchable": true },
+                { "data": "RetailerPhone", "autoWidth": true, "searchable": true },
+                { "data": "RetailerAddress", "autoWidth": true, "searchable": true },
+                { "data": "Description", "autoWidth": true, "searchable": true },
+
+                { "data": null, "defaultContent": "<button  id='btnIssueDetails' class='btn btn-success'>Details</button>" },
+
+            ]
+        });
+        table.buttons().container()
+            .appendTo('#datatable_wrapper .small-4.columns:eq(0)');
+    }
+
+    $('#tblBrandIssuedDatatable tbody').on('click', '#btnIssueDetails', function () {
+
+
+        var currentRow = $(this).closest("tr");
+
+        var data = $('#tblBrandIssuedDatatable').DataTable().row(currentRow).data();
+
+        var issueId = data['IssueId'];
+
+
+        var link = '@Url.Action("GetIssueDetailsPrevious", "BrandIssue", new { id = "replace" })';
+        link = link.replace("replace", issueId);
+        window.location.href=link;
+
+    });
+
+
+</script>
+
+
+

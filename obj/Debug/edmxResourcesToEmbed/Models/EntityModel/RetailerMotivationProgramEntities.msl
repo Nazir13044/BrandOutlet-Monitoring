@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="RetailerMotivationProgramModelStoreContainer" CdmEntityContainer="RetailerMotivationProgramEntities">
+    <EntitySetMapping Name="Retailers">
+      <EntityTypeMapping TypeName="RetailerMotivationProgramModel.Retailer">
+        <MappingFragment StoreEntitySet="Retailers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="DistributorName" ColumnName="DistributorName" />
+          <ScalarProperty Name="DistributorCode" ColumnName="DistributorCode" />
+          <ScalarProperty Name="RetailerName" ColumnName="RetailerName" />
+          <ScalarProperty Name="RetailerAddress" ColumnName="RetailerAddress" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="MonthlyAverageSale" ColumnName="MonthlyAverageSale" />
+          <ScalarProperty Name="MonthlyAverageSaleOfWalton" ColumnName="MonthlyAverageSaleOfWalton" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

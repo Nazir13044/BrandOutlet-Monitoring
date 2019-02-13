@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BrandOutletMonitoringModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BrandingIssues">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrandIssueId" Type="uniqueidentifier" />
+    <Property Name="IssueFile" Type="nvarchar(max)" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="bigint" />
+  </EntityType>
+  <EntityType Name="BrandingIssuesSolved">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IssueId" Type="uniqueidentifier" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="Solutions" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatededBy" Type="bigint" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BrandIssueMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IssueId" Type="uniqueidentifier" />
+    <Property Name="CategoryId" Type="bigint" />
+    <Property Name="SubCategoryId" Type="bigint" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="RetailersPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="RetailersAddress" Type="nvarchar(max)" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="Solved" Type="bit" />
+    <Property Name="Trash" Type="bit" />
+    <Property Name="Seen" Type="bit" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="SolvedBy" Type="bigint" />
+    <Property Name="SolvedDate" Type="datetime" />
+    <Property Name="TrashBy" Type="bigint" />
+    <Property Name="TrashDate" Type="datetime" />
+    <Property Name="ReActiveBy" Type="bigint" />
+    <Property Name="ReActiveDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BrandMonitorCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="EditedBy" Type="bigint" />
+    <Property Name="EditedDate" Type="datetime" />
+    <Property Name="Deletedby" Type="bigint" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BrandMonitorSubCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="BrandMonitorId" Type="bigint" />
+    <Property Name="Duration" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DurationType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ValidityOver" Type="bit" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="EditedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="EditedDate" Type="datetime" />
+    <Property Name="DeletedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BrandOutletDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrandOutletToken" Type="uniqueidentifier" />
+    <Property Name="RetailerId" Type="bigint" />
+    <Property Name="BrandCategoryId" Type="bigint" />
+    <Property Name="BrandCategoryName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BrandSubCategoryId" Type="bigint" />
+    <Property Name="BrandSubCategoryName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Quantity" Type="bigint" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="bigint" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BrandOutletLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutletTokenId" Type="uniqueidentifier" />
+    <Property Name="RetailerId" Type="bigint" />
+    <Property Name="CategoryId" Type="bigint" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubCategoryId" Type="bigint" />
+    <Property Name="SubCategoryName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Quantity" Type="bigint" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BrandOutletMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OutletToken" Type="uniqueidentifier" />
+    <Property Name="RetailerId" Type="bigint" />
+    <Property Name="RetailerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="RetailerPhone" Type="nvarchar" MaxLength="100" />
+    <Property Name="RetailerAddress" Type="nvarchar(max)" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BrandShop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShopName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ShopCategory" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="OwnerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="EditedBy" Type="bigint" />
+    <Property Name="EditedDate" Type="datetime" />
+    <Property Name="DeletedBy" Type="bigint" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Contents">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Contents" Type="nvarchar(max)" />
+    <Property Name="Image" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tblBrandingMonitoringTeam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeId" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="bigint" />
+    <Property Name="Updateddate" Type="datetime" />
+    <Property Name="DeletedBy" Type="bigint" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblBrandingTeam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeId" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="bigint" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="DeletedBy" Type="bigint" />
+    <Property Name="DeletedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblCreateAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReTypePassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile" Type="bigint" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="AddedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblImageUploader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImageTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImageByte" Type="image" />
+  </EntityType>
+  <EntityType Name="tblLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmployeeId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="AddedBy" Type="bigint" />
+    <Property Name="AddedDate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="BrandOutletMonitoringModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandingIssues" EntityType="Self.BrandingIssues" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandingIssuesSolved" EntityType="Self.BrandingIssuesSolved" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandIssueMaster" EntityType="Self.BrandIssueMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandMonitorCategory" EntityType="Self.BrandMonitorCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandMonitorSubCategory" EntityType="Self.BrandMonitorSubCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandOutletDetails" EntityType="Self.BrandOutletDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandOutletLog" EntityType="Self.BrandOutletLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandOutletMaster" EntityType="Self.BrandOutletMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrandShop" EntityType="Self.BrandShop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contents" EntityType="Self.Contents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBrandingMonitoringTeam" EntityType="Self.tblBrandingMonitoringTeam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBrandingTeam" EntityType="Self.tblBrandingTeam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCreateAccount" EntityType="Self.tblCreateAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblImageUploader" EntityType="Self.tblImageUploader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLogin" EntityType="Self.tblLogin" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

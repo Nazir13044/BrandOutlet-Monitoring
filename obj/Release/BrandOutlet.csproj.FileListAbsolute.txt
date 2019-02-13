@@ -1,0 +1,95 @@
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll.config
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\BrandOutlet.pdb
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\EntityFramework.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Owin.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Http.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Razor.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\WebGrease.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Http.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Razor.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.pdb
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\EntityFramework.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\obj\Release\BrandOutlet.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\obj\Release\BrandOutlet.pdb
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\obj\Release\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\BrandOutlet.dll.config
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\BrandOutlet.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\BrandOutlet.pdb
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Mvc.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\Microsoft.Web.Infrastructure.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\obj\Release\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\obj\Release\BrandOutlet.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\obj\Release\BrandOutlet.pdb
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\BrandOutlet.dll.config
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\BrandOutlet.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\BrandOutlet.pdb
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Http.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Mvc.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Http.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\Microsoft.Web.Infrastructure.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\obj\Release\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\obj\Release\BrandOutlet.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\obj\Release\BrandOutlet.pdb

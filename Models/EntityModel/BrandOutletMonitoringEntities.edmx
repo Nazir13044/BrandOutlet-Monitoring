@@ -1,0 +1,976 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BrandOutletMonitoringModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BrandingIssues">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandIssueId" Type="uniqueidentifier" />
+          <Property Name="IssueFile" Type="nvarchar(max)" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="bigint" />
+        </EntityType>
+        <EntityType Name="BrandingIssuesSolved">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IssueId" Type="uniqueidentifier" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+          <Property Name="Solutions" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="UpdatededBy" Type="bigint" />
+          <Property Name="UpdatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BrandIssueMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IssueId" Type="uniqueidentifier" />
+          <Property Name="CategoryId" Type="bigint" />
+          <Property Name="SubCategoryId" Type="bigint" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="RetailersPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="RetailersAddress" Type="nvarchar(max)" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Solved" Type="bit" />
+          <Property Name="Trash" Type="bit" />
+          <Property Name="Seen" Type="bit" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="SolvedBy" Type="bigint" />
+          <Property Name="SolvedDate" Type="datetime" />
+          <Property Name="TrashBy" Type="bigint" />
+          <Property Name="TrashDate" Type="datetime" />
+          <Property Name="ReActiveBy" Type="bigint" />
+          <Property Name="ReActiveDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BrandLogin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserType" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoleId" Type="bigint" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmployeeId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BrandMainMenu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MainMenu" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BrandMonitorCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remarks" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="EditedBy" Type="bigint" />
+          <Property Name="EditedDate" Type="datetime" />
+          <Property Name="Deletedby" Type="bigint" />
+          <Property Name="DeletedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BrandMonitorSubCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="BrandMonitorId" Type="bigint" />
+          <Property Name="Duration" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DurationType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ValidityOver" Type="bit" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="EditedBy" Type="bigint" />
+          <Property Name="EditedDate" Type="datetime" />
+          <Property Name="DeletedBy" Type="bigint" />
+          <Property Name="DeletedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BrandOutletDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandOutletToken" Type="uniqueidentifier" />
+          <Property Name="RetailerId" Type="bigint" />
+          <Property Name="BrandCategoryId" Type="bigint" />
+          <Property Name="BrandCategoryName" Type="nvarchar" MaxLength="100" />
+          <Property Name="BrandSubCategoryId" Type="bigint" />
+          <Property Name="BrandSubCategoryName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Quantity" Type="bigint" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="bigint" />
+          <Property Name="UpdatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BrandOutletLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OutletTokenId" Type="uniqueidentifier" />
+          <Property Name="RetailerId" Type="bigint" />
+          <Property Name="CategoryId" Type="bigint" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubCategoryId" Type="bigint" />
+          <Property Name="SubCategoryName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Quantity" Type="bigint" />
+          <Property Name="Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BrandOutletMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OutletToken" Type="uniqueidentifier" />
+          <Property Name="RetailerId" Type="bigint" />
+          <Property Name="RetailerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="RetailerPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="RetailerAddress" Type="nvarchar(max)" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BrandRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Roles" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BrandShop">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShopName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ShopCategory" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Code" Type="nvarchar" MaxLength="100" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="OwnerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="EditedBy" Type="bigint" />
+          <Property Name="EditedDate" Type="datetime" />
+          <Property Name="DeletedBy" Type="bigint" />
+          <Property Name="DeletedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="BrandSubMenu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubMenu" Type="varchar" MaxLength="50" />
+          <Property Name="Controller" Type="varchar" MaxLength="100" />
+          <Property Name="Action" Type="varchar" MaxLength="100" />
+          <Property Name="MainMenuId" Type="bigint" />
+          <Property Name="RoleId" Type="bigint" />
+          <Property Name="IsMenue" Type="bit" />
+        </EntityType>
+        <EntityType Name="Contents">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Contents" Type="nvarchar(max)" />
+          <Property Name="Image" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tblBrandingMonitoringTeam">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmployeeId" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="bigint" />
+          <Property Name="Updateddate" Type="datetime" />
+          <Property Name="DeletedBy" Type="bigint" />
+          <Property Name="DeletedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblBrandingTeam">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmployeeId" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="AddedBy" Type="bigint" />
+          <Property Name="AddedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="bigint" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="DeletedBy" Type="bigint" />
+          <Property Name="DeletedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblCreateAccount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReTypePassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="bigint" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="AddedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblImageUploader">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ImageTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageByte" Type="image" />
+        </EntityType>
+        <Association Name="FK_tblRoles_tblRoles">
+          <End Role="BrandRoles" Type="Self.BrandRoles" Multiplicity="1" />
+          <End Role="BrandRoles1" Type="Self.BrandRoles" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="BrandRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BrandRoles1">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSubMenu_tblRoles">
+          <End Role="BrandMainMenu" Type="Self.BrandMainMenu" Multiplicity="0..1" />
+          <End Role="BrandSubMenu" Type="Self.BrandSubMenu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BrandMainMenu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BrandSubMenu">
+              <PropertyRef Name="MainMenuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BrandOutletMonitoringModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandingIssues" EntityType="Self.BrandingIssues" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandingIssuesSolved" EntityType="Self.BrandingIssuesSolved" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandIssueMaster" EntityType="Self.BrandIssueMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandLogin" EntityType="Self.BrandLogin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandMainMenu" EntityType="Self.BrandMainMenu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandMonitorCategory" EntityType="Self.BrandMonitorCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandMonitorSubCategory" EntityType="Self.BrandMonitorSubCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandOutletDetails" EntityType="Self.BrandOutletDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandOutletLog" EntityType="Self.BrandOutletLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandOutletMaster" EntityType="Self.BrandOutletMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandRoles" EntityType="Self.BrandRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandShop" EntityType="Self.BrandShop" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrandSubMenu" EntityType="Self.BrandSubMenu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contents" EntityType="Self.Contents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblBrandingMonitoringTeam" EntityType="Self.tblBrandingMonitoringTeam" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblBrandingTeam" EntityType="Self.tblBrandingTeam" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCreateAccount" EntityType="Self.tblCreateAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblImageUploader" EntityType="Self.tblImageUploader" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblRoles_tblRoles" Association="Self.FK_tblRoles_tblRoles">
+            <End Role="BrandRoles" EntitySet="BrandRoles" />
+            <End Role="BrandRoles1" EntitySet="BrandRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSubMenu_tblRoles" Association="Self.FK_tblSubMenu_tblRoles">
+            <End Role="BrandMainMenu" EntitySet="BrandMainMenu" />
+            <End Role="BrandSubMenu" EntitySet="BrandSubMenu" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BrandOutletMonitoringModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BrandShop">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ShopName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ShopCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="EditedBy" Type="Int64" />
+          <Property Name="EditedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedBy" Type="Int64" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblBrandingMonitoringTeam">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <Property Name="Updateddate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedBy" Type="Int64" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblBrandingTeam">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedBy" Type="Int64" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblCreateAccount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReTypePassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="Int64" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblImageUploader">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ImageTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageByte" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="BrandOutletMonitoringEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="BrandShops" EntityType="Self.BrandShop" />
+          <EntitySet Name="tblBrandingMonitoringTeams" EntityType="Self.tblBrandingMonitoringTeam" />
+          <EntitySet Name="tblBrandingTeams" EntityType="Self.tblBrandingTeam" />
+          <EntitySet Name="tblCreateAccounts" EntityType="Self.tblCreateAccount" />
+          <EntitySet Name="tblImageUploaders" EntityType="Self.tblImageUploader" />
+          <EntitySet Name="BrandingIssues" EntityType="BrandOutletMonitoringModel.BrandingIssue" />
+          <EntitySet Name="BrandingIssuesSolveds" EntityType="BrandOutletMonitoringModel.BrandingIssuesSolved" />
+          <EntitySet Name="BrandIssueMasters" EntityType="BrandOutletMonitoringModel.BrandIssueMaster" />
+          <EntitySet Name="BrandMonitorCategories" EntityType="BrandOutletMonitoringModel.BrandMonitorCategory" />
+          <EntitySet Name="BrandOutletDetails" EntityType="BrandOutletMonitoringModel.BrandOutletDetail" />
+          <EntitySet Name="BrandOutletMasters" EntityType="BrandOutletMonitoringModel.BrandOutletMaster" />
+          <EntitySet Name="BrandOutletLogs" EntityType="BrandOutletMonitoringModel.BrandOutletLog" />
+          <EntitySet Name="BrandMainMenus" EntityType="BrandOutletMonitoringModel.BrandMainMenu" />
+          <EntitySet Name="BrandRoles" EntityType="BrandOutletMonitoringModel.BrandRole" />
+          <EntitySet Name="BrandSubMenus" EntityType="BrandOutletMonitoringModel.BrandSubMenu" />
+          <AssociationSet Name="FK_tblSubMenu_tblRoles" Association="BrandOutletMonitoringModel.FK_tblSubMenu_tblRoles">
+            <End Role="BrandMainMenu" EntitySet="BrandMainMenus" />
+            <End Role="BrandSubMenu" EntitySet="BrandSubMenus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblRoles_tblRoles" Association="BrandOutletMonitoringModel.FK_tblRoles_tblRoles">
+            <End Role="BrandRole" EntitySet="BrandRoles" />
+            <End Role="BrandRole1" EntitySet="BrandRoles" />
+          </AssociationSet>
+          <EntitySet Name="BrandLogins" EntityType="BrandOutletMonitoringModel.BrandLogin" />
+          <EntitySet Name="Contents" EntityType="BrandOutletMonitoringModel.Content" />
+          <EntitySet Name="BrandMonitorSubCategories" EntityType="BrandOutletMonitoringModel.BrandMonitorSubCategory" />
+        </EntityContainer>
+        <EntityType Name="BrandingIssue">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="BrandIssueId" Type="Guid" />
+          <Property Name="IssueFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="Int64" />
+        </EntityType>
+        <EntityType Name="BrandingIssuesSolved">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="IssueId" Type="Guid" />
+          <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Solutions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatededBy" Type="Int64" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="BrandIssueMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="IssueId" Type="Guid" />
+          <Property Name="CategoryId" Type="Int64" />
+          <Property Name="SubCategoryId" Type="Int64" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RetailersPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RetailersAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Solved" Type="Boolean" />
+          <Property Name="Trash" Type="Boolean" />
+          <Property Name="Seen" Type="Boolean" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="SolvedBy" Type="Int64" />
+          <Property Name="SolvedDate" Type="DateTime" Precision="3" />
+          <Property Name="TrashBy" Type="Int64" />
+          <Property Name="TrashDate" Type="DateTime" Precision="3" />
+          <Property Name="ReActiveBy" Type="Int64" />
+          <Property Name="ReActiveDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="BrandMonitorCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="EditedBy" Type="Int64" />
+          <Property Name="EditedDate" Type="DateTime" Precision="3" />
+          <Property Name="Deletedby" Type="Int64" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="BrandOutletDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="BrandOutletToken" Type="Guid" />
+          <Property Name="RetailerId" Type="Int64" />
+          <Property Name="BrandCategoryId" Type="Int64" />
+          <Property Name="BrandCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BrandSubCategoryId" Type="Int64" />
+          <Property Name="BrandSubCategoryName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int64" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="BrandOutletMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="OutletToken" Type="Guid" />
+          <Property Name="RetailerId" Type="Int64" />
+          <Property Name="RetailerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RetailerPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RetailerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="BrandOutletLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="OutletTokenId" Type="Guid" />
+          <Property Name="RetailerId" Type="Int64" />
+          <Property Name="CategoryId" Type="Int64" />
+          <Property Name="CategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubCategoryId" Type="Int64" />
+          <Property Name="SubCategoryName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int64" />
+          <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="BrandMainMenu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="MainMenu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BrandSubMenus" Relationship="BrandOutletMonitoringModel.FK_tblSubMenu_tblRoles" FromRole="BrandMainMenu" ToRole="BrandSubMenu" />
+        </EntityType>
+        <EntityType Name="BrandRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Roles" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BrandRoles1" Relationship="BrandOutletMonitoringModel.FK_tblRoles_tblRoles" FromRole="BrandRole" ToRole="BrandRole1" />
+          <NavigationProperty Name="BrandRole1" Relationship="BrandOutletMonitoringModel.FK_tblRoles_tblRoles" FromRole="BrandRole1" ToRole="BrandRole" />
+        </EntityType>
+        <EntityType Name="BrandSubMenu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="SubMenu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Controller" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Action" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MainMenuId" Type="Int64" />
+          <Property Name="RoleId" Type="Int64" />
+          <Property Name="IsMenue" Type="Boolean" />
+          <NavigationProperty Name="BrandMainMenu" Relationship="BrandOutletMonitoringModel.FK_tblSubMenu_tblRoles" FromRole="BrandSubMenu" ToRole="BrandMainMenu" />
+        </EntityType>
+        <Association Name="FK_tblSubMenu_tblRoles">
+          <End Type="BrandOutletMonitoringModel.BrandMainMenu" Role="BrandMainMenu" Multiplicity="0..1" />
+          <End Type="BrandOutletMonitoringModel.BrandSubMenu" Role="BrandSubMenu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BrandMainMenu">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BrandSubMenu">
+              <PropertyRef Name="MainMenuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblRoles_tblRoles">
+          <End Type="BrandOutletMonitoringModel.BrandRole" Role="BrandRole" Multiplicity="1" />
+          <End Type="BrandOutletMonitoringModel.BrandRole" Role="BrandRole1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="BrandRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BrandRole1">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BrandLogin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="Int64" />
+          <Property Name="RoleName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="BrandMonitorSubCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BrandMonitorId" Type="Int64" />
+          <Property Name="Duration" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DurationType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ValidityOver" Type="Boolean" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="AddedDate" Type="DateTime" Precision="3" />
+          <Property Name="AddedBy" Type="Int64" />
+          <Property Name="EditedBy" Type="Int64" />
+          <Property Name="EditedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedBy" Type="Int64" />
+          <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BrandOutletMonitoringModelStoreContainer" CdmEntityContainer="BrandOutletMonitoringEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandShops">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandShop">
+              <MappingFragment StoreEntitySet="BrandShop">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+                <ScalarProperty Name="ShopCategory" ColumnName="ShopCategory" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBrandingMonitoringTeams">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.tblBrandingMonitoringTeam">
+              <MappingFragment StoreEntitySet="tblBrandingMonitoringTeam">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="Updateddate" ColumnName="Updateddate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBrandingTeams">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.tblBrandingTeam">
+              <MappingFragment StoreEntitySet="tblBrandingTeam">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCreateAccounts">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.tblCreateAccount">
+              <MappingFragment StoreEntitySet="tblCreateAccount">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ReTypePassword" ColumnName="ReTypePassword" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblImageUploaders">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.tblImageUploader">
+              <MappingFragment StoreEntitySet="tblImageUploader">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ImageTitle" ColumnName="ImageTitle" />
+                <ScalarProperty Name="ImageByte" ColumnName="ImageByte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandingIssues">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandingIssue">
+              <MappingFragment StoreEntitySet="BrandingIssues">
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="IssueFile" ColumnName="IssueFile" />
+                <ScalarProperty Name="BrandIssueId" ColumnName="BrandIssueId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandingIssuesSolveds">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandingIssuesSolved">
+              <MappingFragment StoreEntitySet="BrandingIssuesSolved">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatededBy" ColumnName="UpdatededBy" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="Solutions" ColumnName="Solutions" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="IssueId" ColumnName="IssueId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandIssueMasters">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandIssueMaster">
+              <MappingFragment StoreEntitySet="BrandIssueMaster">
+                <ScalarProperty Name="ReActiveDate" ColumnName="ReActiveDate" />
+                <ScalarProperty Name="ReActiveBy" ColumnName="ReActiveBy" />
+                <ScalarProperty Name="TrashDate" ColumnName="TrashDate" />
+                <ScalarProperty Name="TrashBy" ColumnName="TrashBy" />
+                <ScalarProperty Name="SolvedDate" ColumnName="SolvedDate" />
+                <ScalarProperty Name="SolvedBy" ColumnName="SolvedBy" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="Seen" ColumnName="Seen" />
+                <ScalarProperty Name="Trash" ColumnName="Trash" />
+                <ScalarProperty Name="Solved" ColumnName="Solved" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="RetailersAddress" ColumnName="RetailersAddress" />
+                <ScalarProperty Name="RetailersPhone" ColumnName="RetailersPhone" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="IssueId" ColumnName="IssueId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandMonitorCategories">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandMonitorCategory">
+              <MappingFragment StoreEntitySet="BrandMonitorCategory">
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="Deletedby" ColumnName="Deletedby" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandOutletDetails">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandOutletDetail">
+              <MappingFragment StoreEntitySet="BrandOutletDetails">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="BrandSubCategoryName" ColumnName="BrandSubCategoryName" />
+                <ScalarProperty Name="BrandSubCategoryId" ColumnName="BrandSubCategoryId" />
+                <ScalarProperty Name="BrandCategoryName" ColumnName="BrandCategoryName" />
+                <ScalarProperty Name="BrandCategoryId" ColumnName="BrandCategoryId" />
+                <ScalarProperty Name="RetailerId" ColumnName="RetailerId" />
+                <ScalarProperty Name="BrandOutletToken" ColumnName="BrandOutletToken" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandOutletMasters">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandOutletMaster">
+              <MappingFragment StoreEntitySet="BrandOutletMaster">
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="RetailerAddress" ColumnName="RetailerAddress" />
+                <ScalarProperty Name="RetailerPhone" ColumnName="RetailerPhone" />
+                <ScalarProperty Name="RetailerName" ColumnName="RetailerName" />
+                <ScalarProperty Name="RetailerId" ColumnName="RetailerId" />
+                <ScalarProperty Name="OutletToken" ColumnName="OutletToken" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandOutletLogs">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandOutletLog">
+              <MappingFragment StoreEntitySet="BrandOutletLog">
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+                <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="RetailerId" ColumnName="RetailerId" />
+                <ScalarProperty Name="OutletTokenId" ColumnName="OutletTokenId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandMainMenus">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandMainMenu">
+              <MappingFragment StoreEntitySet="BrandMainMenu">
+                <ScalarProperty Name="MainMenu" ColumnName="MainMenu" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandRoles">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandRole">
+              <MappingFragment StoreEntitySet="BrandRoles">
+                <ScalarProperty Name="Roles" ColumnName="Roles" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandSubMenus">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandSubMenu">
+              <MappingFragment StoreEntitySet="BrandSubMenu">
+                <ScalarProperty Name="IsMenue" ColumnName="IsMenue" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="MainMenuId" ColumnName="MainMenuId" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="SubMenu" ColumnName="SubMenu" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandLogins">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandLogin">
+              <MappingFragment StoreEntitySet="BrandLogin">
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contents">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.Content">
+              <MappingFragment StoreEntitySet="Contents">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrandMonitorSubCategories">
+            <EntityTypeMapping TypeName="BrandOutletMonitoringModel.BrandMonitorSubCategory">
+              <MappingFragment StoreEntitySet="BrandMonitorSubCategory">
+                <ScalarProperty Name="DeletedDate" ColumnName="DeletedDate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="EditedDate" ColumnName="EditedDate" />
+                <ScalarProperty Name="EditedBy" ColumnName="EditedBy" />
+                <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+                <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ValidityOver" ColumnName="ValidityOver" />
+                <ScalarProperty Name="DurationType" ColumnName="DurationType" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="BrandMonitorId" ColumnName="BrandMonitorId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="true" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams />
+  </edmx:Designer>
+</edmx:Edmx>

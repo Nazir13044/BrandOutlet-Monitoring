@@ -1,0 +1,759 @@
+﻿
+@{
+    ViewBag.Title = "BrandShop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">.tbody { }
+
+    .btn, .buttons, .modal-footer .btn + .btn, button {
+        margin-bottom: 5px;
+        margin-right: 5px;
+        color: white;
+        background-color: #083C68;
+    }
+
+
+    table.dataTable thead tr {
+        background-color: #083C68;
+        color: white;
+    }
+
+    .x_title {
+        border-bottom: 2px solid #E6E9ED;
+        padding: 1px 5px 6px;
+        color: white;
+        background: #003B66;
+    }
+
+    .modal-header {
+        background: #003B66;
+        color: white;
+    }
+
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        color: white !important;
+        border: 1px solid #2980B9 !important;
+        background-color: #2980B9 !important;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2980B9), color-stop(100%, #2980B9)) !important;
+        background: -webkit-linear-gradient(top, #2980B9 0%, #2980B9 100%) !important;
+        background: -moz-linear-gradient(top, #2980B9 0%, #2980B9 100%) !important;
+        background: -ms-linear-gradient(top, #2980B9 0%, #2980B9 100%) !important;
+        background: -o-linear-gradient(top, #2980B9 0%, #2980B9 100%) !important;
+        background: linear-gradient(to bottom, #2980B9 0%, #2980B9 100%) !important;
+    }
+
+    </style>
+
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Brand Outlet Monitoring Shop</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        @*<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">Settings 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings 2</a>
+                            </li>
+                        </ul>*@
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <div class="form-horizontal form-label-left input_mask">
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Shop Name</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtShopName" type="text" maxlength="100" placeholder="Shop Name" required="" class="form-control form-control-success">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Shop Category</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtShopCategory" type="text" maxlength="100" placeholder="Shop Category" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Address</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtAddress" type="text" maxlength="100" placeholder="Address" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Code</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtCode" type="number" maxlength="100" placeholder="Code" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Owner Name</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtOwnerName" type="text" maxlength="100" placeholder="Owner Name" required="" class="form-control form-control-success">
+
+
+                        </div>
+                    </div>
+                    
+                   
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Phone Number</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtPhoneNumber" type="number" maxlength="100" placeholder="Phone Number" required="" class="form-control form-control-success">
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                           
+                            <button class="btn btn-primary" type="reset" id="btnReset">Reset</button>
+                            <input type="Submit" id="btnSave" value="Submit" class="btn btn-success">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+        <div class="x_panel">
+            @*<div class="x_title">
+               @* <h2>Brand Shop Data List</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        @*<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#">Settings 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>*@
+            <div class="x_content">
+                <br />
+                <div class="form-horizontal form-label-left input_mask">
+
+                  
+
+                  
+                  
+                       
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                   <h2>Brand Outlet Monitoring Shop Information</h2>
+
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+
+                                    <table id="tblBrandShopDatatable" style="color: black" class="table table-striped table-bordered">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Shop Name</th>
+                                                <th>Shop Categoty</th>
+                                                <th>Address</th>
+                                                <th>Code</th>
+                                                <th>Owner Name</th>
+                                                <th>Phone Number</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody class="tbody" style="color: black"></tbody>
+
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                            
+
+
+                    </div>
+                        
+
+        
+
+     
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="ModalBrandShopEdit" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Edit Brand Outlet Monitoring Shop</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="x_panel">
+                            @*<div class="x_title">
+                                    <h2>Brand Outlet Monitoring Shop</h2>
+
+                                    <div class="clearfix"></div>
+                                </div>*@
+                            <div class="x_content">
+                                <br />
+                                <div class="form-horizontal form-label-left input_mask">
+
+                                    <div class="hide">
+                                        <label class="col-sm-3 form-control-label">Shop Id</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalShopId" type="text" maxlength="100" placeholder="Shop Name" required="" class="form-control form-control-success">
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Shop Name</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalShopName" type="text" maxlength="100" placeholder="Shop Name" required="" class="form-control form-control-success">
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Shop Category</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalShopCategory" type="text" maxlength="100" placeholder="Shop Category" required="" class="form-control form-control-success">
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Address</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalAddress" type="text" maxlength="100" placeholder="Address" required="" class="form-control form-control-success">
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Code</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalCode" type="number" maxlength="100" placeholder="Code" required="" class="form-control form-control-success">
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Owner Name</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalOwnerName" type="text" maxlength="100" placeholder="Owner Name" required="" class="form-control form-control-success">
+
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Phone Number</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalPhoneNumber" type="number" maxlength="100" placeholder="Phone Number" required="" class="form-control form-control-success">
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                       
+
+                                            <input type="submit" id="btnModalUpdate" value="Update" class="btn btn-success">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<link href="~/Plugins/vendors/Datatables/jquery.dataTables-1.10.9.css" rel="stylesheet" />
+<link href="~/Plugins/vendors/izitoast/iziToast.min.css" rel="stylesheet" />
+<script src="~/Plugins/vendors/jquery/dist/jquery.min.js"></script>
+     
+<script src="~/Plugins/vendors/izitoast/iziToast.min.js"></script>
+<script src="~/Plugins/vendors/Datatables/jquery.dataTable-1.10.9.min.js"></script>
+
+
+<script>    
+    //var editor;
+    $(document).ready(function() {
+        loadData();
+
+    });
+    $("#btnReset").click(function() {
+        Clear();
+    });
+    
+    $('#txtShopName').focus();
+
+    $("#btnSave").click(function () {
+
+        debugger;
+
+        if ($("#txtShopName").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Shop Name Required'
+            });
+            return false;
+
+        } else if ($("#txtShopCategory").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Shop Category Required'
+            });
+            return false;
+        } else if ($("#txtAddress").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Address Required'
+            });
+            return false;
+        }
+        else if ($("#txtCode").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Code Required'
+            });
+            return false;
+        } else if ($("#txtOwnerName").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Owner Name Required'
+            });
+            return false;
+        }
+        else if ($("#txtShopCategory").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Owner Name Required'
+            });
+            return false;
+        } else if ($("#txtPhoneNumber").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Phone Number Required'
+            });
+            return false;
+        }
+
+        else {
+            var brandShopname = {};
+
+            brandShopname.ShopName = $("#txtShopName").val().trim();
+            brandShopname.ShopCategory = $("#txtShopCategory").val().trim();
+            brandShopname.Address = $("#txtAddress").val().trim();
+            brandShopname.Code = $("#txtCode").val().trim();
+            brandShopname.OwnerName = $("#txtOwnerName").val().trim();
+            brandShopname.Phone = $("#txtPhoneNumber").val().trim();
+
+
+            console.log(brandShopname);
+
+            //alert("Data Saved");
+        }
+        debugger;
+        $.ajax({
+            url: '@Url.Action("InsertBrandShopInfo", "Brand")',
+            type: 'Post',
+            data: JSON.stringify({ shopInfo: brandShopname }),
+            dataType: 'json',
+            async: false,
+            contentType: 'application/json',
+            success: function (data) {
+
+                //alert(data.Message);
+                // alert(data.IsSuccess);
+                if (data.IsSuccess) {
+                    iziToast.success({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Success',
+                        message: 'Information Saved Successfully'
+                    });
+
+                    Clear();
+                    loadData();
+                    return true;
+                }
+                else {
+                    iziToast.error({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Error',
+                        message: data.Message
+                    });
+
+                    Clear();
+                    return false;
+                }
+
+
+            },
+            error: function (result) {
+                iziToast.error({
+                    timeout: 2000,
+                    imageWidth: 150,
+                    position: 'center',
+                    title: 'Error',
+                    message: result
+                });
+
+                return false;
+            }
+
+        });
+    });
+
+    //$("#btnSave").click(function () {
+    //    loadData();
+
+    //});
+
+    function loadData() {
+        debugger;
+ 
+
+        var table = $('#tblBrandShopDatatable').DataTable({
+            "ajax": {
+                "url": "@Url.Action("GetBrandShopListDatatable", "Brand")",
+                "type": "GET",
+                "datatype": "json"
+            },
+            "destroy": true,
+            "columnDefs":
+            [{
+                "targets": [0],
+                "searchable": true,
+                 "visible": false
+                },                
+                { "width": "10%", "targets": 1 }
+            ],
+            "pageLength": 5,
+            "scrollY": "200px",
+            "dom": 'Bfrtip',
+
+            "columns": [
+                { "data": "Id", "autoWidth": true, "searchable": true },
+                { "data": "ShopName", "autoWidth": true, "searchable": true },
+                { "data": "ShopCategory", "autoWidth": true, "searchable": true },
+                { "data": "Address", "autoWidth": true, "searchable": true },
+                { "data": "Code", "autoWidth": true, "searchable": true },
+                { "data": "OwnerName", "autoWidth": true, "searchable": true },
+                { "data": "Phone", "autoWidth": true, "searchable": true },
+                { "data": null, "defaultContent": "<button id='Edit'>Edit</button>" },
+                { "data": null, "defaultContent": "<button id='Delete'>Delete</button>" }
+               
+            ]
+        });
+
+
+        //table.buttons().container()
+        //    .appendTo('#datatable_wrapper .small-4.columns:eq(0)');
+
+    }
+
+    $('#tblBrandShopDatatable tbody').on('click', '#Edit', function () {
+        
+
+        var currentRow = $(this).closest("tr");
+
+        var data = $('#tblBrandShopDatatable').DataTable().row(currentRow).data();
+        //console.log(data['Id']);
+        //console.log(data['nivel_puesto']);
+        var shopId = data['Id'];
+        //alert(shopId);
+        //var shopId = $(this).closest("tr").find('td:eq(0)').text();
+        EditBrandShop(shopId);
+
+    });
+    
+    $('#tblBrandShopDatatable tbody').on('click', '#Delete', function () {
+        var currentRow = $(this).closest("tr");
+        var data = $('#tblBrandShopDatatable').DataTable().row(currentRow).data();
+
+        var shopId = data['Id'];
+        debugger;
+        var shopInfo = {};
+        shopInfo.Id = shopId;
+        shopInfo.active = false;
+        
+        iziToast.show({
+            theme: 'dark',
+            balloon: false,
+            title: 'Wait!!',
+            message: 'Are You Sure Want To Delete? !',
+            position: 'center', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
+            progressBarColor: 'rgb(0, 255, 184)',
+            buttons: [
+                ['<button>Ok</button>', function (instance, toast) {
+                    instance.hide({
+                        transitionOut: 'fadeOutUp',
+                        onClosing: function (instance, toast, closedBy) {
+                            console.info('closedBy: ' + closedBy); // The return will be: 'closedBy: buttonName'
+                        }
+                    }, toast, 'buttonName');
+                    UpdateBrandShopInfo(shopInfo, "D");
+                    
+
+                }, true], // true to focus
+                ['<button>Close</button>', function (instance, toast) {
+                    instance.hide({
+                        transitionOut: 'fadeOutUp',
+                        onClosing: function (instance, toast, closedBy) {
+                            console.info('closedBy: ' + closedBy); // The return will be: 'closedBy: buttonName'
+                        }
+                    }, toast, 'buttonName');
+                }]
+            ],
+            onOpening: function (instance, toast) {
+                console.info('callback abriu!');
+            },
+            onClosing: function (instance, toast, closedBy) {
+                console.info('closedBy: ' + closedBy); // tells if it was closed by 'drag' or 'button'
+            }
+        });
+
+
+
+
+
+
+    });
+
+    $("#btnModalUpdate").click(function () {
+        debugger;
+        var shopInfo = {};
+        shopInfo.Id = $('#txtModalShopId').val();
+        shopInfo.ShopName = $('#txtModalShopName').val();
+        shopInfo.ShopCategory = $('#txtModalShopCategory').val();
+        shopInfo.Address = $('#txtModalAddress').val();
+        shopInfo.Code = $('#txtModalCode').val();
+        shopInfo.OwnerName = $('#txtModalOwnerName').val();
+        shopInfo.Phone = $('#txtModalPhoneNumber').val();
+
+        UpdateBrandShopInfo(shopInfo,"E");
+
+    });
+
+    function UpdateBrandShopInfo(shopInfo,type) {
+        debugger;
+        $.ajax({
+            url: '@Url.Action("UpadteBrandShopInfo", "Brand")',
+            type: 'Post',
+            data: JSON.stringify({ shopInfo: shopInfo, type: type }),
+            dataType: 'json',
+            async: false,
+            contentType: 'application/json',
+            success: function (data) {
+
+                //alert(data.Message);
+                // alert(data.IsSuccess);
+                if (data.IsSuccess) {
+                    iziToast.success({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Success',
+                        message: 'Information Upadte Successfully'
+                    });
+
+                    Clear();
+                    loadData();
+                    return true;
+                }
+                else {
+                    iziToast.error({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Error',
+                        message: data.Message
+                    });
+
+                    Clear();
+                    return false;
+                }
+
+
+            },
+            error: function (result) {
+                iziToast.error({
+                    timeout: 2000,
+                    imageWidth: 150,
+                    position: 'center',
+                    title: 'Error',
+                    message: result
+                });
+
+                return false;
+            }
+
+        });
+
+    }
+
+    function EditBrandShop(id) {
+
+        $.ajax({
+            url: " @Url.Action("EditBrandShopListById", "Brand")",
+            type: "GET",
+        data: { id: id },
+        contentType: "application/json;charset=UTF-8",
+        dataType: "json",
+        success: function(result) {
+
+            console.log(result);
+            $('#txtModalShopId').val(result.Id);
+            $('#txtModalShopName').val(result.ShopName);
+            $('#txtModalShopCategory').val(result.ShopCategory);
+            $('#txtModalAddress').val(result.Address);
+            $('#txtModalCode').val(result.Code);
+            $('#txtModalOwnerName').val(result.OwnerName);
+            $('#txtModalPhoneNumber').val(result.Phone);
+
+
+            $("#ModalBrandShopEdit").modal('show');
+            $("#btnModalUpdate").click(function () {
+                $('#ModalBrandShopEdit').modal('hide');
+            });
+
+        },
+        error: function(errormessage) {
+            alert(errormessage.responseText);
+        }
+    });
+    return false;
+
+    }
+
+    function Clear() {
+        $('#txtShopName').val('');
+        $('#txtShopCategory').val('');
+        $('#txtAddress').val('');
+        $('#txtCode').val('');
+        $('#txtOwnerName').val('');
+        $('#txtPhoneNumber').val('');
+        $('#txtShopName').focus();
+        
+    }
+</script>

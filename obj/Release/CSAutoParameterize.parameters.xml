@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BrandOutletMonitoringEntities-Web.config Connection String" description="BrandOutletMonitoringEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.EntityModel.BrandOutletMonitoringEntities.csdl|res://*/Models.EntityModel.BrandOutletMonitoringEntities.ssdl|res://*/Models.EntityModel.BrandOutletMonitoringEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.100.97;initial catalog=BrandOutletMonitoring;user id=sa;password=Adios82amigo;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\ASIF\ DOCS\\Brand\ Monitor\ New\ From\ Rokon\\BrandOutlet\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BrandOutletMonitoringEntities']/@connectionString" />
+  </parameter>
+  <parameter name="RetailerMotivationProgramEntities-Web.config Connection String" description="RetailerMotivationProgramEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.EntityModel.RetailerMotivationProgramEntities.csdl|res://*/Models.EntityModel.RetailerMotivationProgramEntities.ssdl|res://*/Models.EntityModel.RetailerMotivationProgramEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=192.168.100.97;initial catalog=RetailerMotivationProgram;user id=sa;password=Adios82amigo;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\ASIF\ DOCS\\Brand\ Monitor\ New\ From\ Rokon\\BrandOutlet\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RetailerMotivationProgramEntities']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="DefaultConnection_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\ASIF\ DOCS\\Brand\ Monitor\ New\ From\ Rokon\\BrandOutlet\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

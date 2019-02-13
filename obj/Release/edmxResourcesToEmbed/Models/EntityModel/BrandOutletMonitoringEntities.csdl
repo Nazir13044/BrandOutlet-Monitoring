@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BrandOutletMonitoringModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BrandShop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShopName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ShopCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="EditedBy" Type="Int64" />
+    <Property Name="EditedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int64" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblBrandingMonitoringTeam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="Updateddate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int64" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblBrandingTeam">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="Int64" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblCreateAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReTypePassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="Int64" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblImageUploader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImageTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageByte" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="BrandOutletMonitoringEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="BrandShops" EntityType="Self.BrandShop" />
+    <EntitySet Name="Contents" EntityType="Self.Content" />
+    <EntitySet Name="tblBrandingMonitoringTeams" EntityType="Self.tblBrandingMonitoringTeam" />
+    <EntitySet Name="tblBrandingTeams" EntityType="Self.tblBrandingTeam" />
+    <EntitySet Name="tblCreateAccounts" EntityType="Self.tblCreateAccount" />
+    <EntitySet Name="tblImageUploaders" EntityType="Self.tblImageUploader" />
+    <EntitySet Name="BrandingIssues" EntityType="BrandOutletMonitoringModel.BrandingIssue" />
+    <EntitySet Name="BrandingIssuesSolveds" EntityType="BrandOutletMonitoringModel.BrandingIssuesSolved" />
+    <EntitySet Name="BrandIssueMasters" EntityType="BrandOutletMonitoringModel.BrandIssueMaster" />
+    <EntitySet Name="tblLogins" EntityType="BrandOutletMonitoringModel.tblLogin" />
+    <EntitySet Name="BrandMonitorCategories" EntityType="BrandOutletMonitoringModel.BrandMonitorCategory" />
+    <EntitySet Name="BrandMonitorSubCategories" EntityType="BrandOutletMonitoringModel.BrandMonitorSubCategory" />
+    <EntitySet Name="BrandOutletDetails" EntityType="BrandOutletMonitoringModel.BrandOutletDetail" />
+    <EntitySet Name="BrandOutletMasters" EntityType="BrandOutletMonitoringModel.BrandOutletMaster" />
+    <EntitySet Name="BrandOutletLogs" EntityType="BrandOutletMonitoringModel.BrandOutletLog" />
+  </EntityContainer>
+  <EntityType Name="BrandingIssue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandIssueId" Type="Guid" />
+    <Property Name="IssueFile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="Int64" />
+  </EntityType>
+  <EntityType Name="BrandingIssuesSolved">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IssueId" Type="Guid" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Solutions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatededBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BrandIssueMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IssueId" Type="Guid" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="SubCategoryId" Type="Int64" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RetailersPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RetailersAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="Solved" Type="Boolean" />
+    <Property Name="Trash" Type="Boolean" />
+    <Property Name="Seen" Type="Boolean" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="SolvedBy" Type="Int64" />
+    <Property Name="SolvedDate" Type="DateTime" Precision="3" />
+    <Property Name="TrashBy" Type="Int64" />
+    <Property Name="TrashDate" Type="DateTime" Precision="3" />
+    <Property Name="ReActiveBy" Type="Int64" />
+    <Property Name="ReActiveDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BrandMonitorCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="EditedBy" Type="Int64" />
+    <Property Name="EditedDate" Type="DateTime" Precision="3" />
+    <Property Name="Deletedby" Type="Int64" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BrandMonitorSubCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BrandMonitorId" Type="Int64" />
+    <Property Name="Duration" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DurationType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ValidityOver" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="EditedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EditedDate" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeletedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BrandOutletDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandOutletToken" Type="Guid" />
+    <Property Name="RetailerId" Type="Int64" />
+    <Property Name="BrandCategoryId" Type="Int64" />
+    <Property Name="BrandCategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BrandSubCategoryId" Type="Int64" />
+    <Property Name="BrandSubCategoryName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int64" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int64" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BrandOutletMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OutletToken" Type="Guid" />
+    <Property Name="RetailerId" Type="Int64" />
+    <Property Name="RetailerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RetailerPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RetailerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BrandOutletLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OutletTokenId" Type="Guid" />
+    <Property Name="RetailerId" Type="Int64" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="CategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubCategoryId" Type="Int64" />
+    <Property Name="SubCategoryName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int64" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddedBy" Type="Int64" />
+    <Property Name="AddedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

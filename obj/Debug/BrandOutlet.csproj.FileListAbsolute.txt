@@ -1,0 +1,472 @@
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll.config
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\BrandOutlet.pdb
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\EntityFramework.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Owin.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.Razor.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\WebGrease.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.Razor.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.pdb
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\EntityFramework.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.dll
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.pdb
+C:\Users\Walton\documents\visual studio 2013\Projects\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll.config
+D:\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll
+D:\BrandOutlet\BrandOutlet\bin\BrandOutlet.pdb
+D:\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.dll
+D:\BrandOutlet\BrandOutlet\bin\EntityFramework.dll
+D:\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.dll
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\BrandOutlet\BrandOutlet\bin\Owin.dll
+D:\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.dll
+D:\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.dll
+D:\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.dll
+D:\BrandOutlet\BrandOutlet\bin\System.Web.Razor.dll
+D:\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.dll
+D:\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.dll
+D:\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.dll
+D:\BrandOutlet\BrandOutlet\bin\WebGrease.dll
+D:\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.xml
+D:\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.xml
+D:\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.xml
+D:\BrandOutlet\BrandOutlet\bin\System.Web.Razor.xml
+D:\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.xml
+D:\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.xml
+D:\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.xml
+D:\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.pdb
+D:\BrandOutlet\BrandOutlet\bin\EntityFramework.xml
+D:\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.xml
+D:\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.pdb
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll.config
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\BrandOutlet.pdb
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\EntityFramework.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Owin.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Http.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Razor.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\WebGrease.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Http.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.Razor.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.pdb
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\EntityFramework.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\New Projects\BAND MONITORING\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.pdb
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll.config
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\BrandOutlet.pdb
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\EntityFramework.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Owin.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Http.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Razor.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\WebGrease.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Http.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.Razor.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.pdb
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\EntityFramework.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Walton Projects\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\Walton Projects\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.pdb
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll.config
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\BrandOutlet.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\BrandOutlet.pdb
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\EntityFramework.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Owin.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Http.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Razor.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\WebGrease.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Http.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Helpers.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Mvc.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Optimization.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.Razor.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Deployment.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\System.Web.WebPages.Razor.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Antlr3.Runtime.pdb
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\EntityFramework.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\EntityFramework.SqlServer.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Google.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.pdb
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\BrandOutlet.dll.config
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\BrandOutlet.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\BrandOutlet.pdb
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\System.Web.Mvc.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\bin\Microsoft.Web.Infrastructure.xml
+D:\New Projects\Brand Monitoring New\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\New Projects\Brand Monitoring New\BrandOutlet\obj\Debug\BrandOutlet.pdb
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\BrandOutlet.dll.config
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\BrandOutlet.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\BrandOutlet.pdb
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Mvc.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\bin\Microsoft.Web.Infrastructure.xml
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\ASIF DOCS\Brand Monitoring New\BrandOutlet\obj\Debug\BrandOutlet.pdb
+D:\WaltonBrandOutlet\BrandOutlet\bin\BrandOutlet.dll.config
+D:\WaltonBrandOutlet\BrandOutlet\bin\BrandOutlet.dll
+D:\WaltonBrandOutlet\BrandOutlet\bin\BrandOutlet.pdb
+D:\WaltonBrandOutlet\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\WaltonBrandOutlet\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\WaltonBrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\WaltonBrandOutlet\BrandOutlet\bin\System.Web.Http.dll
+D:\WaltonBrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\WaltonBrandOutlet\BrandOutlet\bin\System.Web.Mvc.dll
+D:\WaltonBrandOutlet\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\WaltonBrandOutlet\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\WaltonBrandOutlet\BrandOutlet\bin\System.Web.Http.xml
+D:\WaltonBrandOutlet\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\WaltonBrandOutlet\BrandOutlet\bin\Microsoft.Web.Infrastructure.xml
+D:\WaltonBrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\WaltonBrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\WaltonBrandOutlet\BrandOutlet\obj\Debug\BrandOutlet.pdb
+C:\Users\Walton\Desktop\BrandOutlet\bin\BrandOutlet.dll.config
+C:\Users\Walton\Desktop\BrandOutlet\bin\BrandOutlet.dll
+C:\Users\Walton\Desktop\BrandOutlet\bin\BrandOutlet.pdb
+C:\Users\Walton\Desktop\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Walton\Desktop\BrandOutlet\bin\Newtonsoft.Json.dll
+C:\Users\Walton\Desktop\BrandOutlet\bin\System.Net.Http.Formatting.dll
+C:\Users\Walton\Desktop\BrandOutlet\bin\System.Web.Http.dll
+C:\Users\Walton\Desktop\BrandOutlet\bin\System.Web.Http.WebHost.dll
+C:\Users\Walton\Desktop\BrandOutlet\bin\System.Web.Mvc.dll
+C:\Users\Walton\Desktop\BrandOutlet\bin\Newtonsoft.Json.xml
+C:\Users\Walton\Desktop\BrandOutlet\bin\System.Net.Http.Formatting.xml
+C:\Users\Walton\Desktop\BrandOutlet\bin\System.Web.Http.xml
+C:\Users\Walton\Desktop\BrandOutlet\bin\System.Web.Http.WebHost.xml
+C:\Users\Walton\Desktop\BrandOutlet\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Walton\Desktop\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+C:\Users\Walton\Desktop\BrandOutlet\obj\Debug\BrandOutlet.dll
+C:\Users\Walton\Desktop\BrandOutlet\obj\Debug\BrandOutlet.pdb
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\BrandOutlet.dll.config
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\BrandOutlet.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\BrandOutlet.pdb
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Http.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Mvc.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Http.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\bin\Microsoft.Web.Infrastructure.xml
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\ASIF DOCS\Brand Monitor New From Rokon\BrandOutlet\obj\Debug\BrandOutlet.pdb
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\BrandOutlet.dll.config
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\BrandOutlet.dll
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\BrandOutlet.pdb
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\System.Web.Http.dll
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\System.Web.Mvc.dll
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\System.Web.Http.xml
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\bin\Microsoft.Web.Infrastructure.xml
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\obj\Debug\BrandOutlet.pdb
+D:\New Projects\Brand Monitoring_GitLab\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\EntityFramework.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Razor.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\BrandOutlet.dll.config
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\BrandOutlet.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\BrandOutlet.pdb
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\x86\sqlcese40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\x86\sqlceqp40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\x86\sqlceme40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\x86\sqlceer40EN.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\x86\sqlcecompact40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\x86\sqlceca40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\x86\Microsoft.VC90.CRT\README_ENU.txt
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\x86\Microsoft.VC90.CRT\msvcr90.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\amd64\sqlcese40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\amd64\sqlceqp40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\amd64\sqlceme40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\amd64\sqlceer40EN.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\amd64\sqlcecompact40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\amd64\sqlceca40.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\amd64\Microsoft.VC90.CRT\README_ENU.txt
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\amd64\Microsoft.VC90.CRT\msvcr90.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Antlr3.Runtime.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\EntityFramework.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\EntityFramework.SqlServer.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\EntityFramework.SqlServerCompact.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Cors.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Security.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Web.Infrastructure.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Newtonsoft.Json.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Owin.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Data.SqlServerCe.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Net.Http.Formatting.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Cors.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Helpers.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Http.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Http.Owin.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Http.WebHost.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Mvc.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Optimization.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Razor.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.WebPages.Deployment.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.WebPages.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.WebPages.Razor.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\WebGrease.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Antlr3.Runtime.pdb
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\EntityFramework.SqlServer.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\EntityFramework.SqlServerCompact.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Cors.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Security.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Newtonsoft.Json.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Net.Http.Formatting.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Helpers.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Http.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Http.Owin.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Http.WebHost.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.Optimization.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.WebPages.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.WebPages.Deployment.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\System.Web.WebPages.Razor.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\bin\Microsoft.Web.Infrastructure.xml
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\obj\Debug\BrandOutlet.csprojResolveAssemblyReference.cache
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\obj\Debug\BrandOutlet.dll
+D:\Walton Projects\Brand Moitoring_GitLab\BrandOutlet\obj\Debug\BrandOutlet.pdb

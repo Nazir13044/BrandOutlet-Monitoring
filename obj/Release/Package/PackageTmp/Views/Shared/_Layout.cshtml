@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="~/production/images/favicon.ico" type="image/ico" />
+    <title>Walton </title>
+   
+
+    @*<link href="~/Plugins/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Plugins/build/css/custom.min.css" rel="stylesheet" />
+    <link href="~/Plugins/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+@Styles.Render("~/bundles/bootstrapcss")
+
+@Styles.Render("~/bundles/fontawesomecss")
+    
+@Styles.Render("~/bundles/Customcss")
+
+
+
+
+</head>
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+
+                            <img src="~/Plugins/vendors/BootLogo.png" style="width: 50px;height: 50px;" /> <span>Walton Group</span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- menu profile quick info -->
+                        
+                        <!-- /menu profile quick info -->
+                        <br />
+
+                        <!-- sidebar menu -->
+                        @Html.Partial("_PartialSidebar")
+
+                        <!-- /sidebar menu -->
+                        <!-- /menu footer buttons -->
+                        @Html.Partial("_PartialFooter")
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+                <!-- top navigation -->
+                @Html.Partial("_PartialTopNavigation")
+                <!-- /top navigation -->
+                <!-- page content -->
+                @*@Html.Partial("_PartialPageContent")*@
+
+
+
+                <div class="right_col" role="main">
+
+                
+                    <div id="body">
+
+
+                        @RenderBody()
+
+                    </div>
+                    @*@Html.Partial("_PartialPageContent")*@
+                 
+                    <br />
+                
+
+                   
+                </div>
+
+                <!-- /page content -->
+
+                <style>
+                    .main-footer {
+                        position: fixed;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        background-color: #273F53;
+                        color: white;
+                        text-align: left;
+                    }
+
+                    .nav_menu {
+                        float: left;
+                        background: #243F52;
+                        border-bottom: 1px solid #D9DEE4;
+                        margin-bottom: 10px;
+                        width: 100%;
+                        /*position: fixed;*/
+                    }
+                </style>
+
+
+                <!-- footer content -->
+                @*<footer class="main-footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                &nbsp;
+                            </div>
+                            <div class="col-sm-6">
+
+
+                                <p>Walton Group&copy; 2018-2019</p>
+                                <p>Design by <a href="http://www.waltonbd.com/" class="external">Walton Group</a></p>
+                            </div>
+                            @*<div class="col-sm-6 text-right">
+                                    <p>Design by <a href="http://www.waltonbd.com/" class="external">Walton Group</a></p>
+
+                                </div>
+                        </div>
+                    </div>
+                </footer>*@
+
+                @*<footer class="main-footer" >
+                    <div class="pull-left">
+                        <p>Walton Group&copy; 2018-2019</p>
+                       
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>*@
+                
+                
+                
+                
+                
+
+                <!-- /footer content -->
+            </div>
+        </div>
+        
+        @*<script src="~/Plugins/vendors/jquery/dist/jquery.min.js"></script>
+        <script src="~/Plugins/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="~/Plugins/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+        <script src="~/Plugins/build/js/custom.min.js"></script>*@
+ @Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrapjs")      
+@Scripts.Render("~/bundles/prog")
+@Scripts.Render("~/bundles/custom")
+  @Scripts.Render("~/bundles/jqueryDataTable")   
+        
+        
+
+    </body>
+
+
+</html>

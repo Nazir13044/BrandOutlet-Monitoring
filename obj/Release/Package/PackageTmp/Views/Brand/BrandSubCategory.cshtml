@@ -1,0 +1,804 @@
+﻿
+@{
+    ViewBag.Title = "BrandSubCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /*.btn, .buttons, .modal-footer .btn + .btn, button {
+        margin-bottom: 5px;
+        margin-right: 5px;
+        color: white;
+        background-color: #083C68;
+    }*/
+
+    table.dataTable thead tr {
+        background-color: darkslategray;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+
+    table.dataTable tbody tr {
+        color: #2F4F4F;
+        font-weight: bold;
+    }
+
+    .x_title {
+        border-bottom: 2px solid #E6E9ED;
+        padding: 1px 5px 6px;
+        color: white;
+        background: darkslategray;
+    }
+
+    .modal-header {
+        background: darkslategray;
+        color: white;
+    }
+
+    
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        color: white !important;
+        border: 1px solid #2980B9 !important;
+        background-color: #2980B9 !important;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2980B9), color-stop(100%, #2980B9)) !important;
+        background: -webkit-linear-gradient(top, #2980B9 0%, #2980B9 100%) !important;
+        background: -moz-linear-gradient(top, #2980B9 0%, #2980B9 100%) !important;
+        background: -ms-linear-gradient(top, #2980B9 0%, #2980B9 100%) !important;
+        background: -o-linear-gradient(top, #2980B9 0%, #2980B9 100%) !important;
+        background: linear-gradient(to bottom, #2980B9 0%, #2980B9 100%) !important;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Brand Outlet Monitoring Sub Category</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                       
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <div class="form-horizontal form-label-left input_mask">
+
+                   
+                      
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Brand Category</label>
+                        <div class="col-sm-7" id="">
+                            <select id="txtCategory" data-placeholder="Choose a Line" class="chosen-select form-control" tabindex="1"></select>
+
+                        </div>
+
+                    </div>                 
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Name</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtName" type="text" maxlength="100" placeholder="Sub Category Name" required="" class="form-control form-control-success">
+
+
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Type</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtType" type="text" maxlength="100" placeholder="Type" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>
+                 
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Duration</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtDuration" type="number" maxlength="100" placeholder="Duration" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Duration Type</label>
+                        <div class="col-sm-7" id="">
+                            @* <input id="txtDurationType" type="text" maxlength="11" placeholder="Duration Type" required="" class="form-control form-control-success">*@
+
+                            <select id="txtDurationType" data-placeholder="Duration Type" class="form-control form-control-success" tabindex="1">
+                                <option value="select">----Select----</option>
+                                <option value="Month">Month</option>
+                                <option value="Year">Year</option>
+                                
+
+                            </select>
+                        </div>
+                    </div>
+                    
+           
+
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                            @*<button type="button" class="btn btn-primary">Cancel</button>*@
+                            <button class="btn btn-primary" id="btnReset" type="reset">Reset</button>
+                            <input type="button" id="btnSave" value="Submit" class="btn btn-success">
+                        </div>
+                    </div>
+                    
+                    
+            
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+        <div class="x_panel">
+          
+            <div class="x_content">
+                <br />
+                <div class="form-horizontal form-label-left input_mask">
+
+
+
+
+
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                              
+                                <div class="x_content">
+
+                                    <table id="tblBrandSubCategoryDatatable" style="color: black" class="table table-striped table-bordered">
+                                        
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Branding Category</th>
+                                                <th>Sub Category</th>
+                                                 <th>Type</th>
+                                                <th>Duration</th>
+                                                <th>Duration Type</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody class="tbody" style="color: black"></tbody>
+
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="ModalBrandSubCategory" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Update Brand Outlet Monitoring SubCategory  </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-10 col-xs-12">
+                        <div class="x_panel">
+                            @*<div class="x_title">
+                                @*<h2>Update Information</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li>
+                                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    @*<li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li>
+                                                    <a href="#">Settings 1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Settings 2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    <li>
+                                        <a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>*@
+                            <div class="x_content">
+                                <br />
+                                <div class="form-horizontal form-label-left input_mask">
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Brand Category</label>
+                                        <div class="col-sm-7" id="">
+                                            <select id="txtModalCategory" data-placeholder="Choose a Line" class="chosen-select form-control" tabindex="1"></select>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="hide" >
+                                        <label class="col-sm-3 form-control-label">Id</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalSubCategoryId" type="text" maxlength="100" placeholder="Sub Category Name" required="" class="form-control form-control-success">
+
+
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Name</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalName" type="text" maxlength="100" placeholder="Sub Category Name" required="" class="form-control form-control-success">
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Type</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtMoadlType" type="text" maxlength="100" placeholder="Type" required="" class="form-control form-control-success">
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Duration</label>
+                                        <div class="col-sm-7" id="">
+                                            <input id="txtModalDuration" type="number" maxlength="100" placeholder="Duration" required="" class="form-control form-control-success">
+
+
+                                        </div>
+
+                                    </div>
+
+                                    @*<div class="form-group row">
+                                            <label class="col-sm-3 form-control-label">Duration</label>
+                                            <div class="col-sm-7" id="">
+                                                <input id="txtDurationTypeS" type="text" maxlength="100" placeholder="Duration" required="" class="form-control form-control-success">
+
+
+                                            </div>
+
+                                        </div>*@
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 form-control-label">Duration Type</label>
+                                        <div class="col-sm-7" id="">
+
+                                            <select id="txtModalDurationType" data-placeholder="Duration Type" class="form-control form-control-success" tabindex="1">
+                                               @* <option value="select">----Select----</option>*@
+                                                <option value="Month">Month</option>
+                                                <option value="Year">Year</option>
+
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+
+                                            @* <button class="btn btn-primary" type="reset">Reset</button>*@
+                                            <input type="button" id="btnUpdate" value="Update" class="btn btn-success">
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<link href="~/Plugins/vendors/Datatables/jquery.dataTables-1.10.9.css" rel="stylesheet" />
+<link href="~/Plugins/vendors/JqueryChoosen/chosen-bootstrap.css" rel="stylesheet" />
+<link href="~/Plugins/vendors/JqueryChoosen/chosen.css" rel="stylesheet" />
+<link href="~/Plugins/vendors/izitoast/iziToast.min.css" rel="stylesheet" />
+
+@*<script src=" https />/code.jquery.com/ui/1.12.1/jquery-ui.js"></script>*@
+@*<script src="~/Plugins/vendors/JQueryEasyUI/jquery.easyui.min.js"></script>*@
+@*<script src="~/Plugins/vendors/jquery/dist/jquery.min.js"></script>*@
+<script src="~/Plugins/vendors/jquery/dist/jquery-1.9.1.min.js"></script>
+<script src="~/Plugins/vendors/izitoast/iziToast.min.js"></script>
+<script src="~/Plugins/vendors/Datatables/jquery.dataTable-1.10.9.min.js"></script>
+
+<script src="~/Plugins/vendors/chosen.jquery.js"></script>
+
+<script>
+    
+   
+    $(document).ready(function () {
+        
+        LoadAllNames();
+       // LoadDropDownAllNames();
+        loadData();
+    });
+    
+    $('#btnReset').click(function () {
+        clear();
+    });
+
+    function LoadAllNames() {
+        $.ajax({
+            type: "GET",
+            url: "@Url.Action("GetNameList", "Brand")",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                $("#txtCategory").html('');
+                $.each(data, function (idx, obj) {
+                    //$.each(data, function (idx, obj) {
+                    $("#txtCategory").append('<option value="' + obj.Id + '">' + obj.Name + '</option>');
+                });
+                $("#txtCategory").trigger("liszt:updated");
+                $("#txtCategory").chosen({ width: "95%" });
+            },
+            error: function (data) {
+                console.log(data.d);
+            }
+        });
+     
+    }
+    function LoadDropDownAllNames() {
+        debugger;
+        var url = "@Url.Action("GetNameList", "Brand")";
+        $.getJSON(url, function (json) {
+           
+            var elems = $("#txtModalCategory");
+            console.log('json');
+            
+      
+            elems.empty();
+
+       
+            elems.append("<option value='0'>---Select---</option>");
+            $.each(json, function (idx, obj) {
+              
+           
+                elems.append('<option value="' + obj.id + '">' + obj.value + '</option>');
+            });
+
+   
+            elems.chosen({ width: "100%", height: "10px" });
+            //$(".chosen-select").chosen({ height: "10%" });
+
+        });
+     
+    }
+    $("#btnSave").click(function () {
+
+        debugger;
+
+        if ($("#txtName").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Name Required'
+            });
+            return false;
+        } else if ($("#txtType").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Type Required'
+            });
+            return false;
+        }
+        else if ($("#txtDuration").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Duration Required'
+            });
+            return false;
+        }
+        else if ($("#txtDurationType").val() == "") {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Duration Type Required'
+            });
+            return false;
+        }
+        else {
+            var brandSubCategory = {};
+
+            
+            brandSubCategory.BrandMonitorId = $("#txtCategory").val();
+            brandSubCategory.Name = $("#txtName").val().trim();
+            brandSubCategory.Type = $("#txtType").val().trim();
+            brandSubCategory.Duration = $("#txtDuration").val().trim();
+            brandSubCategory.DurationType = $("#txtDurationType").val().trim();
+
+
+
+            console.log(brandSubCategory);
+
+            //alert("Data Saved");
+        }
+        debugger;
+        $.ajax({
+            url: '@Url.Action("InsertBrandMonitorSubCategoryInfo", "Brand")',
+            type: 'Post',
+            data: JSON.stringify({ subInfo: brandSubCategory }),
+            dataType: 'json',
+            async: false,
+            contentType: 'application/json',
+            success: function (data) {
+
+                //alert(data.Message);
+                // alert(data.IsSuccess);
+                if (data.IsSuccess) {
+                    iziToast.success({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Success',
+                        message: 'Information Saved Successfully'
+                    });
+                
+                    clear();
+                    loadData();
+                    return true;
+                }
+                else {
+                    iziToast.error({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Error',
+                        message: data.Message
+                    });
+                    clear();
+                    return false;
+                }
+
+
+            },
+            error: function (result) {
+                iziToast.error({
+                    timeout: 2000,
+                    imageWidth: 150,
+                    position: 'center',
+                    title: 'Error',
+                    message: result
+                });
+                clear();
+                return false;
+            }
+
+        });
+    });
+
+  
+    function clear() {
+
+        $('#txtCategory').val(0);
+        $('#txtName').val('');
+        $('#txtType').val('');
+        $('#txtDuration').val('');
+     
+        $('#txtDurationType').val(0);
+        $('#txtShopName').focus();
+    }
+    
+    //function Modalclear() {
+
+    //    $('#txtModalSubCategoryId').val(0);
+    //    $('#txtModalName').val('');
+    //    $('#txtMoadlType').val('');
+    //    $('#txtModalDuration').val('');
+
+    //    $('#txtModalDurationType').val(0);
+    //    $('#txtShopName').focus();
+    //}
+
+    //$(document).ready(function () {
+    //    loadData();
+
+    //});
+    function loadData() {
+        debugger;
+        
+
+        var table = $('#tblBrandSubCategoryDatatable').DataTable({
+            "ajax": {
+                "url": "@Url.Action("GetBrandSubCategoryList", "Brand")",
+                "type": "GET",
+                "datatype": "json"
+            },
+            "destroy": true,
+            "columnDefs":
+            [{
+                    "targets": [0],
+                    "searchable": true,
+                    "visible": false
+                },                
+                { "width": "10%", "targets": 1 }
+            ],
+            "pageLength": 10,
+            
+            "dom": 'Bfrtip',
+            
+            "columns": [
+                { "data": "Id", "autoWidth": true, "searchable": true },
+                { "data": "BrandingCategoryName", "autoWidth": true, "searchable": true },
+                
+                { "data": "Name", "autoWidth": true, "searchable": true },
+                { "data": "Type", "autoWidth": true, "searchable": true },
+                { "data": "Duration", "autoWidth": true, "searchable": true },
+                { "data": "DurationType", "autoWidth": true, "searchable": true },
+                { "data": null, "defaultContent": "<button class='btn btn-primary' id='Edit'>Edit</button>" },
+                { "data": null, "defaultContent": "<button class='btn btn-danger' id='Delete'>Delete</button>" }
+               
+            ]
+        });
+
+
+        table.buttons().container().appendTo('#datatable_wrapper .small-4.columns:eq(0)');
+
+    }
+
+    $('#tblBrandSubCategoryDatatable tbody').on('click', '#Edit', function () {
+
+        debugger;
+        var currentRow = $(this).closest("tr");
+
+        var data = $('#tblBrandSubCategoryDatatable').DataTable().row(currentRow).data();
+        
+        var subCatId = data['Id'];
+        
+        EditBrandSubCategory(subCatId);
+
+    });
+
+    function EditBrandSubCategory(id) {
+        debugger;
+        $.ajax({
+            url: " @Url.Action("EditBrandSubCategorById", "Brand")",
+            type: "GET",
+            data: { id: id },
+            contentType: "application/json;charset=UTF-8",
+            dataType: "json",
+            success: function(result) {
+                debugger;
+
+                //console.log(result);
+                $('#txtModalSubCategoryId').val(result[0].Id);
+                $('#txtModalName').val(result[0].Name);
+                $('#txtMoadlType').val(result[0].Type);
+                $('#txtModalDuration').val(result[0].Duration);
+                $('#txtModalDurationType').val(result[0].DurationType);
+                
+
+                $("#txtModalCategory option[value='" + result[0].BrandMonitorId + "']").attr('selected', 'selected');
+                $("#txtModalDurationType option[value='" + result[0].DurationType.trim() + "']").attr('selected', 'selected');
+           
+
+                $("#ModalBrandSubCategory").modal('show');
+                $("#btnUpdate").click(function() {
+                    $('#ModalBrandSubCategory').modal('hide');
+                });
+              
+            },
+            error: function(errormessage) {
+                alert(errormessage.responseText);
+            }
+        });
+        return false;
+
+    }
+
+    $('#tblBrandSubCategoryDatatable tbody').on('click', '#Delete', function () {
+        var currentRow = $(this).closest("tr");
+        var data = $('#tblBrandSubCategoryDatatable').DataTable().row(currentRow).data();
+
+        var subCategoryId = data['Id'];
+        debugger;
+        var subcatergoryInfo = {};
+        subcatergoryInfo.Id = subCategoryId;
+        subcatergoryInfo.active = false;
+
+        iziToast.show({
+            theme: 'dark',
+            balloon: false,
+            title: 'Wait!!',
+            message: 'Are You Sure Want To Delete? !',
+            position: 'center', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
+            progressBarColor: 'rgb(0, 255, 184)',
+            buttons: [
+                ['<button>Ok</button>', function (instance, toast) {
+                    instance.hide({
+                        transitionOut: 'fadeOutUp',
+                        onClosing: function (instance, toast, closedBy) {
+                            console.info('closedBy: ' + closedBy); // The return will be: 'closedBy: buttonName'
+                        }
+                    }, toast, 'buttonName');
+                    UpdateBrandSubCategoryInfo(subcatergoryInfo, "D");
+
+
+                }, true], // true to focus
+                ['<button>Close</button>', function (instance, toast) {
+                    instance.hide({
+                        transitionOut: 'fadeOutUp',
+                        onClosing: function (instance, toast, closedBy) {
+                            console.info('closedBy: ' + closedBy); // The return will be: 'closedBy: buttonName'
+                        }
+                    }, toast, 'buttonName');
+                }]
+            ],
+            onOpening: function (instance, toast) {
+                console.info('callback abriu!');
+            },
+            onClosing: function (instance, toast, closedBy) {
+                console.info('closedBy: ' + closedBy); // tells if it was closed by 'drag' or 'button'
+            }
+        });
+
+
+
+
+
+
+    });
+
+    $("#btnUpdate").click(function () {
+        debugger;
+        var subcatergoryInfo = {};
+        subcatergoryInfo.Id = $('#txtModalSubCategoryId').val();
+        subcatergoryInfo.Name = $('#txtModalName').val();
+        subcatergoryInfo.Type = $('#txtMoadlType').val();
+        subcatergoryInfo.Duration = $('#txtModalDuration').val();
+        subcatergoryInfo.DurationType = $('#txtModalDurationType').val();
+        
+
+        UpdateBrandSubCategoryInfo(subcatergoryInfo, "E");
+
+    });
+
+    function UpdateBrandSubCategoryInfo(subcatergoryInfo, type) {
+        debugger;
+        $.ajax({
+            url: '@Url.Action("UpdateBrandSubCategoryInformation", "Brand")',
+            type: 'Post',
+            data: JSON.stringify({ subcatergoryInfo: subcatergoryInfo, type: type }),
+            dataType: 'json',
+            async: false,
+            contentType: 'application/json',
+            success: function (data) {
+
+                //alert(data.Message);
+                // alert(data.IsSuccess);
+                if (data.IsSuccess) {
+                    iziToast.success({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Success',
+                        message: 'Information Upadte Successfully'
+                    });
+
+                    clear();
+                    loadData();
+                    return true;
+                }
+                else {
+                    iziToast.error({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Error',
+                        message: data.Message
+                    });
+
+                    Clear();
+                    return false;
+                }
+
+
+            },
+            error: function (result) {
+                iziToast.error({
+                    timeout: 2000,
+                    imageWidth: 150,
+                    position: 'center',
+                    title: 'Error',
+                    message: result
+                });
+
+                return false;
+            }
+
+        });
+
+    }
+
+
+   
+
+</script>

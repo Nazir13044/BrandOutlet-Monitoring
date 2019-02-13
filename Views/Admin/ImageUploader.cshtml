@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "ImageUploader";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<div class="navbar nav_title" style="border: 0;">
+    <a href=" " class="site_title"><i class="fa fa-users"></i> <span>Users</span></a>
+</div>*@
+
+<div class="container">
+
+    <div class="col-md-4">
+        <input type="file" id="SelectImage" /><br />
+        <a href="#" class="btn btn-sm btn-danger" onclick="UploadImage()">Upload</a>
+    </div>
+
+    <div class="col-md-10 thumbnail" id="UploadedImage"></div>
+</div>
+<script src="~/Plugins/vendors/jquery/dist/jquery.min.js"></script>
+
+<script>
+    var UploadImage = function () {
+        var file = $("#SelectImage").get(0).files;
+        var data = new FormData;
+        debugger;
+        data.append("ImageFile", file[0]);
+        $.ajax({
+            type: "POST",
+
+            url: "/Admin/InsertImage",
+            data: data,
+            contentType: false,
+            processData: false,
+            success: function (imgID) {
+
+                //alert('image save....... ');
+                $("#UploadedImage").append('<img src="/Admin/DisplayingImage?imgID=' + imgID + '"class=img-responsive thimbnail"/>');
+                alert('image save....... ');
+            }
+        });
+    }
+</script>

@@ -1,0 +1,56 @@
+﻿ <!-- sidebar menu -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+        <h3>DashBoard</h3>
+        <ul class="nav side-menu">
+           
+            <li>
+                <a><i class="fa fa-edit"></i> Monitoring Setup <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+
+                    <li><a href="@Url.Action("BrandMonitoringCategory", "Brand")">Brand Category</a></li>
+                    <li><a href="@Url.Action("BrandSubCategory", "Brand")">Brand Sub Category</a></li>
+                    <li><a href="@Url.Action("BrandShop", "Brand")">Brand Shop</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a><i class="fa fa-ban"></i>Branding Issues<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("BrandIssuedView", "BrandIssue")">New Issues</a></li>
+                    <li><a href="@Url.Action("BrandIssueIgnoreToday", "BrandIssue")">Previous Issues</a></li>
+                    <li><a href="@Url.Action("BrandIssueSolved", "BrandIssue")"> Solved Issues</a></li>
+                    <li><a href="@Url.Action("BrandTrashDatatable", "BrandIssue")">Trashed Issues</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li>
+                <a><i class="fa fa-group"></i>Branding Team<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("BrandingTeam", "BrandingTeam")">Branding Team</a></li>
+                    <li><a href="@Url.Action("BrandingMonitoringTeam", "BrandingTeam")">Branding Monitoring Team</a></li>
+                   
+
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-gears"></i>Branding Outlet<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("NewOutlet", "BrandOutlet")">Add New Outlet</a></li>
+                    <li><a href="@Url.Action("ReBrandingOutlet", "BrandOutlet")">Re-Brandingm</a></li>
+                    <li><a href="@Url.Action("BrandOutletView", "BrandOutlet")">View Added Outlet</a></li>
+
+
+                </ul>
+            </li>
+            
+
+            
+        </ul>
+    </div>
+</div>
+<!-- /sidebar menu -->

@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "BrandOutletDetailsData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<style>
+    .modal-dialog {
+    }
+
+    #hdIssue {
+        background-color: red;
+    }
+
+    .panel-title {
+        font-size: 25px;
+    }
+
+    p {
+        color: black;
+        font-size: 20px;
+    }
+
+    .img-responsive {
+        cursor: zoom-in;
+    }
+</style>
+
+<div class="container" style="text-align: center; color: Black; ">
+    <div class="page-header">
+        <h1>Brand Outlet Details</h1>
+    </div>
+
+
+    @foreach (var items in ViewBag.Brandoutlet)
+    {
+        <div class="row" style="background-color: #2B4F4F; color: Black; padding: 5px; text-align: center; ">
+            <div class="panel panel-success">
+
+
+                <h4>
+                    <b> Brand Outlet Token :</b>  @items.BrandOutletToken
+                </h4>
+
+                <h4>
+                    <b> Brand Category Name :  </b>  @items.BrandCategoryName
+                </h4>
+                <h4>
+                    <b> Brand SubCategory Name :  </b>   @items.BrandSubCategoryName
+                </h4>
+                <h4>
+                    <b>  Quantity : </b>   @items.Quantity
+                </h4>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D43002A-A2A2-4B9B-B64C-177AF00722BF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrandOutlet</RootNamespace>
+    <AssemblyName>BrandOutlet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact">
+      <HintPath>packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors">
+      <HintPath>packages\Microsoft.Owin.Cors.4.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\Api Controller\BrandCategoryController.cs" />
+    <Compile Include="Controllers\Api Controller\BrandIssueController.cs" />
+    <Compile Include="Controllers\Api Controller\BrandSubCategoryController.cs" />
+    <Compile Include="Controllers\Api Controller\ImageController.cs" />
+    <Compile Include="Controllers\Api Controller\LoginController.cs" />
+    <Compile Include="Controllers\Api Controller\RetailersController.cs" />
+    <Compile Include="Controllers\Api Controller\ValuesController.cs" />
+    <Compile Include="Controllers\BrandingIssueSolvedController.cs" />
+    <Compile Include="Controllers\BrandingTeamController.cs" />
+    <Compile Include="Controllers\BrandIssueController.cs" />
+    <Compile Include="Controllers\BrandOutletController.cs" />
+    <Compile Include="CustomModel\BrandingIssueModel.cs" />
+    <Compile Include="CustomModel\BrandSubCategoryModel.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BrandController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="CustomModel\ImageViewModel.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper Class\ApplicationState.cs" />
+    <Compile Include="Helper Class\SessionData.cs" />
+    <Compile Include="Helper Class\UserAuthorization.cs" />
+    <Compile Include="Interface\IAdmin.cs" />
+    <Compile Include="Interface\IBrand.cs" />
+    <Compile Include="Interface\IBrandingIssuesSolved.cs" />
+    <Compile Include="Interface\IBrandingTeam.cs" />
+    <Compile Include="Interface\IBrandIssue.cs" />
+    <Compile Include="Interface\IBrandOutlet.cs" />
+    <Compile Include="Manager\AdminManager.cs" />
+    <Compile Include="Manager\BrandingIssueSolvedManager.cs" />
+    <Compile Include="Manager\BrandingTeamManager.cs" />
+    <Compile Include="Manager\BrandIssueManager.cs" />
+    <Compile Include="Manager\BrandManager.cs" />
+    <Compile Include="Manager\BrandOutletManager.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Custom Api Models\BrandCategory.cs" />
+    <Compile Include="Models\Custom Api Models\BrandingIssueModel.cs" />
+    <Compile Include="Models\Custom Api Models\BrandSubCategoryModel.cs" />
+    <Compile Include="Models\Custom Api Models\Credentials.cs" />
+    <Compile Include="Models\Custom Api Models\Result.cs" />
+    <Compile Include="Models\Custom Api Models\RetailersInfo.cs" />
+    <Compile Include="Models\EntityModel\BrandingIssue.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandingIssuesSolved.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandIssueMaster.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandLogin.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandMainMenu.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandMonitorCategory.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandMonitorSubCategory.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandOutletDetail.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandOutletLog.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandOutletMaster.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandOutletMonitoringEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrandOutletMonitoringEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandOutletMonitoringEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandOutletMonitoringEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BrandOutletMonitoringEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandRole.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandShop.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\BrandSubMenu.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\Content.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\C__MigrationHistory.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\Retailer.cs">
+      <DependentUpon>RetailerMotivationProgramEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\RetailerMotivationProgramEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetailerMotivationProgramEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\RetailerMotivationProgramEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetailerMotivationProgramEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\RetailerMotivationProgramEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RetailerMotivationProgramEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\tblBrandingMonitoringTeam.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\tblBrandingTeam.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\tblCreateAccount.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityModel\tblImageUploader.cs">
+      <DependentUpon>BrandOutletMonitoringEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\MenuModel.cs" />
+    <Compile Include="Models\NewBrandOutletModel.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AdminRepository.cs" />
+    <Compile Include="Repository\BarandingIssueSolvedRepository.cs" />
+    <Compile Include="Repository\BrandingTeamRepository.cs" />
+    <Compile Include="Repository\BrandIssueRepository.cs" />
+    <Compile Include="Repository\BrandOutletRepository.cs" />
+    <Compile Include="Repository\BrandRepository.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\EntityModel\BrandOutletMonitoringEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BrandOutletMonitoringEntities.edmx</DependentUpon>
+      <LastGenOutput>BrandOutletMonitoringEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EntityModel\BrandOutletMonitoringEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BrandOutletMonitoringEntities.edmx</DependentUpon>
+      <LastGenOutput>BrandOutletMonitoringEntities.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EntityModel\RetailerMotivationProgramEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RetailerMotivationProgramEntities.edmx</DependentUpon>
+      <LastGenOutput>RetailerMotivationProgramEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EntityModel\RetailerMotivationProgramEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RetailerMotivationProgramEntities.edmx</DependentUpon>
+      <LastGenOutput>RetailerMotivationProgramEntities.cs</LastGenOutput>
+    </Content>
+    <Content Include="Plugins\build\css\custom.css" />
+    <Content Include="Plugins\build\css\custom.min.css" />
+    <Content Include="Plugins\build\images\back_disabled.png" />
+    <Content Include="Plugins\build\images\back_enabled.png" />
+    <Content Include="Plugins\build\images\back_enabled_hover.png" />
+    <Content Include="Plugins\build\images\forward_disabled.png" />
+    <Content Include="Plugins\build\images\forward_enabled.png" />
+    <Content Include="Plugins\build\images\forward_enabled_hover.png" />
+    <Content Include="Plugins\build\images\loading.gif" />
+    <Content Include="Plugins\build\js\custom.js" />
+    <Content Include="Plugins\build\js\custom.min.js" />
+    <Content Include="Plugins\vendors\BootLogo.png" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\bootstrap-progressbar.js" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\bootstrap-progressbar.min.js" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.0.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.0.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.1.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.1.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.2.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.2.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.3.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.3.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.4.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.0.4.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.1.0.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.1.0.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.1.1.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.1.1.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.2.0.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.2.0.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.2.1.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.2.1.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.2.2.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.2.2.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.3.0.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.3.0.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.3.1.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.3.1.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.3.2.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-2.3.2.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.0-rc1.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.0-rc1.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.0-rc2.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.0-rc2.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.0.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.0.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.1.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.1.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.2.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.2.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.3.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.0.3.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.1.0.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.1.0.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.1.1.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.1.1.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.2.0.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.2.0.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.3.0.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.3.0.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.3.1.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.3.1.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.3.2.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.3.2.min.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.3.4.css" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\css\bootstrap-progressbar-3.3.4.min.css" />
+    <Content Include="Plugins\vendors\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Plugins\vendors\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Plugins\vendors\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Plugins\vendors\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Plugins\vendors\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Plugins\vendors\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Plugins\vendors\bootstrap\dist\js\npm.js" />
+    <Content Include="Plugins\vendors\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Plugins\vendors\bootstrap\js\affix.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\alert.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\button.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\carousel.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\collapse.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\dropdown.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\modal.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\popover.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\scrollspy.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\tab.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\tooltip.js" />
+    <Content Include="Plugins\vendors\bootstrap\js\transition.js" />
+    <Content Include="Plugins\vendors\chosen.jquery.js" />
+    <Content Include="Plugins\vendors\Datatables\dataTableButtons.js" />
+    <Content Include="Plugins\vendors\Datatables\dataTableEditor.js" />
+    <Content Include="Plugins\vendors\Datatables\dataTableSelect.js" />
+    <Content Include="Plugins\vendors\Datatables\jquery.dataTable-1.10.9.min.js" />
+    <Content Include="Plugins\vendors\Datatables\jquery.dataTables-1.10.9.css" />
+    <Content Include="Plugins\vendors\fileInput\fileinput.css" />
+    <Content Include="Plugins\vendors\fileInput\fileinput.js" />
+    <Content Include="Plugins\vendors\font-awesome\.gitignore" />
+    <Content Include="Plugins\vendors\font-awesome\css\font-awesome.css" />
+    <Content Include="Plugins\vendors\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Plugins\vendors\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Plugins\vendors\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Plugins\vendors\ImageLoader\image.css" />
+    <Content Include="Plugins\vendors\ImageLoader\image.js" />
+    <Content Include="Plugins\vendors\izitoast\iziToast.min.css" />
+    <Content Include="Plugins\vendors\izitoast\iziToast.min.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\changelog.txt" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\bg.gif" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Amsterdam Van-Gogh Museum.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Amsterdam.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Antwerpen Rubenshaus.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Antwerpen.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Appenzell.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Arnhem Historisches Museum.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Bled.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Bled_Die Burg von Bled.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Bogojina_Die Pfarrkirche.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\BolognaBasilicadiSanPetronio.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\BolognaFontanadelNettuno.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\BolognaPiazzaMaggiore.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Bolsward Martinikerk.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Bolsward Stadhuis.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Bolsward.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\BordeauxND.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\BordeauxPlaceB.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\BotanischerGartenZuerich.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Bouillon.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Gent Hotel de Ville2.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Gent.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\GenuabeiNacht.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\GenuaStrand.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Giessbachfaelle Brienz.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Giethoorn.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Gnesen.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Gornij Grad_KATHEDRALE.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Gossensass.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Grad_Burg Grad2.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\GrandDixence.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\GrenoblePanorama.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Groningen.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\GrottenvonReclere.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Guebwiller.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Kamnik_Die Franziskaner Bibliothek.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Karlsbad Muehlbrunnkolonnade.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Kazimierz.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\KirchbergAltesRathaus1.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\KlagenfurtDom.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\KleineMeerjungfreu.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\LazienkiparkWarschau.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Lednice.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Leeuwarden Fries Museum.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Leeuwarden.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\LeHavreHafen.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Lelystad.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\LeMans.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Lemmer.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Leper Halles aux draps.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Leuven Museum fuer Kirchenkunst.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Leuven.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Luxemburg.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\LuzernAltstadt.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\LuzernPicassoMuseum.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Lyon.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Maastricht Onze Lieve Vrou...jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Maastricht St Servaasbasiliek.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Maastricht Walmuur.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Maastricht.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\MagiatalMaggia.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Mailand3.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Metlika_Bela Krajina Museum.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\MilanoCastelloSforzesco.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\MilanoDom.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\MilazzoBurg.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Novo Mesto_Das Museum.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\ObervellachBurgFalkenstein.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\OdenseeAndersen.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Olimje_Kirche und Apotheke in Olimje.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Olomouc.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\OlympischesMuseumLausanne.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\OrleansMaisonJeannedArc.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\OrleansParcFloraldelaSource.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\OstiaAntica.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Ostrow Tumski.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\PoertschachSchlossLeonstain.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Portoroz.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Posen.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Postojna.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Prag Altstaedter Ring.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Prag Waldsteinpalais.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\RouenNotreDame.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\Salzbergwerk Bex.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\SalzbergwerkWieliczka.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\SalzburgFestungHohensalzburg.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\SalzburgResidenz.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\WienMuseumsQuartier.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\WienMusikverein.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\WienRiesenrad.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images\WienRingstrasse.jpg" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\index.html" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\json.html" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\localdata.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\main.css" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\animated-overlay.gif" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-icons_222222_256x240.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-icons_454545_256x240.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-icons_888888_256x240.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\indicator.gif" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\jquery-ui.css" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\jquery-ui.custom.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\jquery.autocomplete.css" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\jquery.autocomplete.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\jquery.autocomplete.min.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\jquery.autocomplete.pack.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\lib\jquery.ajaxQueue.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\lib\jquery.bgiframe.min.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\lib\jquery.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\lib\thickbox-compressed.js" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\lib\thickbox.css" />
+    <Content Include="Plugins\vendors\JqueryChoosen\chosen-bootstrap.css" />
+    <Content Include="Plugins\vendors\JqueryChoosen\chosen.css" />
+    <Content Include="Plugins\vendors\JqueryChoosen\chosen.jquery.min.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\changelog.txt" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\datagrid-detailview.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\datagrid-scrollview.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\accordion\actions.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\accordion\ajax.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\accordion\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\accordion\tools.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\accordion\_content.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\calendar\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\calendar\firstday.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combobox\actions.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combobox\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combobox\customformat.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combobox\dynamicdata.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combobox\multiple.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combobox\remotedata.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combobox\remotejsonp.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combogrid\actions.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combogrid\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combogrid\initvalue.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combogrid\multiple.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combotree\actions.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combotree\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combotree\initvalue.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combotree\multiple.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combo\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\cellstyle.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\checkbox.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\clientpagination.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\columngroup.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\complextoolbar.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\contextmenu.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\custompager.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\footer.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\formatcolumns.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\frozencolumns.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\frozenrows.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\mergecells.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\rowborder.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\rowediting.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\rowstyle.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\selection.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\simpletoolbar.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\transform.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datebox\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datebox\dateformat.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datebox\events.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datebox\validate.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datetimebox\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datetimebox\initvalue.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datetimebox\showseconds.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\demo.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\dialog\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\dialog\complextoolbar.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\dialog\toolbarbuttons.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\draggable\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\draggable\constain.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\draggable\snap.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\droppable\accept.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\droppable\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\droppable\sort.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\easyloader\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\form\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\form\load.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\addremove.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\complex.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\full.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\nestedlayout.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\nocollapsible.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\_content.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\linkbutton\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\linkbutton\iconalign.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\linkbutton\plain.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\menubutton\actions.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\menubutton\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\menu\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\menu\customitem.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\menu\events.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\messager\alert.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\messager\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\messager\interactive.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\messager\position.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\numberbox\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\numberbox\format.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\numberbox\range.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\numberspinner\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\numberspinner\increment.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\numberspinner\range.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\pagination\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\pagination\custombuttons.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\pagination\simple.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\panel\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\panel\customtools.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\panel\loadcontent.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\panel\nestedpanel.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\panel\paneltools.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\panel\_content.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\progressbar\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\propertygrid\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\propertygrid\customcolumns.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\propertygrid\groupformat.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\resizable\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\searchbox\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\searchbox\category.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\slider\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\slider\formattip.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\slider\rule.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\slider\vertical.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\splitbutton\actions.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\splitbutton\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tabs\autoheight.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tabs\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tabs\hover.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tabs\nestedtabs.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tabs\striptools.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tabs\tabposition.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tabs\tabstools.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tabs\_content.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\timespinner\actions.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\timespinner\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\timespinner\range.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\treegrid\actions.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\treegrid\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\treegrid\contextmenu.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\treegrid\editable.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\treegrid\footer.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\treegrid\reports.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\actions.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\animation.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\checkbox.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\contextmenu.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\dnd.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\editable.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\icons.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\validatebox\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\window\basic.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\window\customtools.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\window\inlinewindow.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\window\modalwindow.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\window\windowlayout.html" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\easyloader.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\jquery-1.12.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\jquery-1.8.0.min.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\jquery.easyui.min.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\licence_gpl.txt" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\license_commercial.txt" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-af.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-ar.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-bg.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-ca.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-cs.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-cz.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-da.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-de.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-el.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-en.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-es.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-fr.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-it.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-jp.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-nl.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-pt_BR.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-ru.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-tr.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-zh_CN.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\locale\easyui-lang-zh_TW.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.accordion.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.calendar.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.combo.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.combobox.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.combogrid.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.combotree.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.datagrid.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.datebox.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.datetimebox.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.dialog.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.draggable.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.droppable.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.form.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.layout.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.linkbutton.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.menu.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.menubutton.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.messager.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.numberbox.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.numberspinner.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.pagination.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.panel.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.parser.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.progressbar.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.propertygrid.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.resizable.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.searchbox.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.slider.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.spinner.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.splitbutton.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.tabs.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.timespinner.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.tree.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.treegrid.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.validatebox.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\plugins\jquery.window.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\readme.txt" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\easyloader.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.accordion.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.calendar.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.combobox.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.datebox.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.draggable.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.droppable.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.form.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.linkbutton.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.menu.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.parser.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.progressbar.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.propertygrid.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.resizable.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.slider.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.tabs.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\src\jquery.window.js" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\accordion.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\calendar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\combo.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\combobox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\datagrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\datebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\dialog.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\easyui.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\accordion_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\blank.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\calendar_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\combo_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\datagrid_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\datebox_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\layout_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\linkbutton_bg.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\loading.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\menu_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\messager_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\pagination_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\panel_tools.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\searchbox_button.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\slider_handle.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\spinner_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\tabs_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\tree_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\validatebox_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\images\validatebox_warning.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\layout.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\linkbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\menu.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\menubutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\messager.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\pagination.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\panel.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\progressbar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\propertygrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\searchbox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\slider.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\spinner.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\splitbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\tabs.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\tree.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\validatebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\black\window.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\accordion.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\calendar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\combo.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\combobox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\datagrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\datebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\dialog.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\easyui.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\blank.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\loading.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\validatebox_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\layout.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\linkbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\menu.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\menubutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\messager.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\pagination.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\panel.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\progressbar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\propertygrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\searchbox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\slider.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\spinner.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\splitbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\tabs.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\tree.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\validatebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\bootstrap\window.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\accordion.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\calendar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\combo.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\combobox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\datagrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\datebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\dialog.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\easyui.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\accordion_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\blank.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\calendar_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\combo_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\datagrid_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\datebox_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\layout_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\linkbutton_bg.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\loading.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\menu_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\messager_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\pagination_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\panel_tools.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\searchbox_button.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\slider_handle.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\spinner_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\tabs_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\tree_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\validatebox_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\images\validatebox_warning.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\layout.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\linkbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\menu.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\menubutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\messager.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\pagination.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\panel.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\progressbar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\propertygrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\searchbox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\slider.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\spinner.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\splitbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\tabs.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\tree.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\validatebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\default\window.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\accordion.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\calendar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\combo.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\combobox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\datagrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\datebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\dialog.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\easyui.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\accordion_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\blank.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\calendar_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\circle.ico" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\circle_blue.ico" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\circle_green.ico" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\circle_orange.ico" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\combo_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\datagrid_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\datebox_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\layout_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\loading.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\menu_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\messager_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\pagination_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\panel_tools.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\searchbox_button.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\slider_handle.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\spinner_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\tabs_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\tree_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\validatebox_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\images\validatebox_warning.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\layout.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\linkbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\menu.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\menubutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\messager.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\pagination.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\panel.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\progressbar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\propertygrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\searchbox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\slider.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\spinner.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\splitbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\tabs.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\tree.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\validatebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\gray\window.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icon.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\back.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\blank.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\cancel.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\cut.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\edit_add.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\edit_remove.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\filesave.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\help.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\list.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\listview.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\mini_add.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\mini_edit.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\mini_refresh.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\no.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\node-tree.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\nodetree.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\ok.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\pencil.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\print.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\redo.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\reload.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\search.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\sum.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\thumbnail.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\tip.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\treeview.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\icons\undo.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\accordion.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\calendar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\combo.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\combobox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\datagrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\datebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\dialog.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\easyui.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\accordion_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\blank.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\calendar_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\combo_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\datagrid_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\datebox_arrow.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\layout_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\loading.gif" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\menu_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\messager_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\pagination_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\panel_tools.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\searchbox_button.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\slider_handle.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\spinner_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\tabs_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\tree_icons.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\validatebox_arrows.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\images\validatebox_warning.png" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\layout.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\linkbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\menu.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\menubutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\messager.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\pagination.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\panel.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\progressbar.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\propertygrid.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\searchbox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\slider.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\spinner.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\splitbutton.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\tabs.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\tree.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\validatebox.css" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\themes\metro\window.css" />
+    <Content Include="Plugins\vendors\jquery\dist\jquery-1.9.1.min.js" />
+    <Content Include="Plugins\vendors\jquery\dist\jquery.js" />
+    <Content Include="Plugins\vendors\jquery\dist\jquery.min.js" />
+    <Content Include="Plugins\vendors\welcomelogo.png" />
+    <Content Include="production\css\maps\jquery-jvectormap-2.0.3.css" />
+    <Content Include="production\images\american-express.png" />
+    <Content Include="production\images\cropper.jpg" />
+    <Content Include="production\images\favicon.ico" />
+    <Content Include="production\images\img.jpg" />
+    <Content Include="production\images\inbox.png" />
+    <Content Include="production\images\mastercard.png" />
+    <Content Include="production\images\media.jpg" />
+    <Content Include="production\images\paypal.png" />
+    <Content Include="production\images\picture.jpg" />
+    <Content Include="production\images\prod-1.jpg" />
+    <Content Include="production\images\prod-2.jpg" />
+    <Content Include="production\images\prod-3.jpg" />
+    <Content Include="production\images\prod-4.jpg" />
+    <Content Include="production\images\prod-5.jpg" />
+    <Content Include="production\images\user.png" />
+    <Content Include="production\images\visa.png" />
+    <Content Include="production\images\w.jpg" />
+    <Content Include="production\js\datepicker\daterangepicker.js" />
+    <Content Include="production\js\moment\moment.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_PartialFooter.cshtml" />
+    <Content Include="Views\Shared\_PartialPageContent.cshtml" />
+    <Content Include="Views\Shared\_PartialSidebar.cshtml" />
+    <Content Include="Views\Shared\_PartialTopNavigation.cshtml" />
+    <Content Include="Views\Brand\BrandMonitoringCategory.cshtml" />
+    <Content Include="Views\Brand\BrandSubCategory.cshtml" />
+    <Content Include="Views\Brand\BrandShop.cshtml" />
+    <Content Include="Views\Brand\Home.cshtml" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\UploadImage\" />
+    <Folder Include="Views\BrandingIssueSolved\" />
+    <Folder Include="Views\NewOutlet\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\.bower.json" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\bower.json" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\CHANGELOG.md" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\CONTRIBUTORS.md" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\less\bootstrap-progressbar-2.x.x.less" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\less\bootstrap-progressbar-3.0.0-3.1.x.less" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\less\bootstrap-progressbar-3.2.0.less" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\less\bootstrap-progressbar-3.3.0-3.x.x.less" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\LICENSE" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\package.json" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\README.md" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\scss\bootstrap-progressbar-2.x.x.scss" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\scss\bootstrap-progressbar-3.0.0-3.1.x.scss" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\scss\bootstrap-progressbar-3.2.0.scss" />
+    <Content Include="Plugins\vendors\bootstrap-progressbar\scss\bootstrap-progressbar-3.3.0-3.x.x.scss" />
+    <Content Include="Plugins\vendors\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Plugins\vendors\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Plugins\vendors\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Plugins\vendors\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Plugins\vendors\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Plugins\vendors\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Plugins\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Plugins\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Plugins\vendors\bootstrap\js\.jscsrc" />
+    <Content Include="Plugins\vendors\bootstrap\js\.jshintrc" />
+    <Content Include="Plugins\vendors\jquery\dist\jquery.min.map" />
+    <Content Include="Plugins\vendors\font-awesome\.bower.json" />
+    <Content Include="Plugins\vendors\font-awesome\.npmignore" />
+    <Content Include="Plugins\vendors\font-awesome\bower.json" />
+    <Content Include="Plugins\vendors\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Plugins\vendors\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Plugins\vendors\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Plugins\vendors\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Plugins\vendors\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Plugins\vendors\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Plugins\vendors\font-awesome\less\animated.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\core.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\fixed-width.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\font-awesome.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\icons.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\larger.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\list.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\mixins.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\path.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\screen-reader.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\stacked.less" />
+    <Content Include="Plugins\vendors\font-awesome\less\variables.less" />
+    <Content Include="Plugins\vendors\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_animated.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_core.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_icons.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_larger.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_list.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_mixins.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_path.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_stacked.scss" />
+    <Content Include="Plugins\vendors\font-awesome\scss\_variables.scss" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\emails.php" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\emails.phps" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\images.php" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\search.php" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\demo\search.phps" />
+    <Content Include="Plugins\vendors\jquery-autocomplete\todo" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\accordion\datagrid_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combobox\combobox_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combogrid\datagrid_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\combotree\tree_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\datagrid_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\datagrid_data2.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\datagrid\products.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\form\form_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\datagrid_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\propertygrid_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\layout\tree_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\propertygrid\propertygrid_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tabs\tree_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\treegrid\treegrid_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\treegrid\treegrid_data2.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\treegrid\treegrid_data3.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\tree_data1.json" />
+    <Content Include="Plugins\vendors\JQueryEasyUI\demo\tree\tree_data2.json" />
+    <EntityDeploy Include="Models\EntityModel\BrandOutletMonitoringEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BrandOutletMonitoringEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\EntityModel\BrandOutletMonitoringEntities.edmx.diagram">
+      <DependentUpon>BrandOutletMonitoringEntities.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\EntityModel\RetailerMotivationProgramEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RetailerMotivationProgramEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\EntityModel\RetailerMotivationProgramEntities.edmx.diagram">
+      <DependentUpon>RetailerMotivationProgramEntities.edmx</DependentUpon>
+    </Content>
+    <None Include="Project_Readme.html" />
+    <Content Include="Views\Brand\CreateAccount.cshtml" />
+    <Content Include="Views\Brand\login.cshtml" />
+    <Content Include="Views\Admin\ImageUploader.cshtml" />
+    <Content Include="Views\BrandingTeam\BrandingTeam.cshtml" />
+    <Content Include="Views\BrandingTeam\BrandingMonitoringTeam.cshtml" />
+    <Content Include="Views\BrandIssue\Index.cshtml" />
+    <Content Include="Views\BrandIssue\BrandIssuedView.cshtml" />
+    <Content Include="Views\BrandIssue\GetIssueDetails.cshtml" />
+    <None Include="Properties\PublishProfiles\BrandMonitor-91.pubxml" />
+    <Content Include="Views\BrandIssue\BrandIssueSolved.cshtml" />
+    <Content Include="Views\BrandIssue\GetIssueSolvedDetails.cshtml" />
+    <Content Include="Views\BrandIssue\BrandTrashDatatable.cshtml" />
+    <Content Include="Views\BrandIssue\GetIssueTrashDetails.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\BrandOutlet\NewOutlet.cshtml" />
+    <Content Include="Views\BrandOutlet\ReBrandingOutlet.cshtml" />
+    <Content Include="Views\BrandOutlet\BrandOutletView.cshtml" />
+    <Content Include="Views\BrandOutlet\BrandOutletDetailsData.cshtml" />
+    <Content Include="Views\BrandIssue\BrandIssueIgnoreToday.cshtml" />
+    <Content Include="Views\BrandIssue\GetIssueDetailsPrevious.cshtml" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2615</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2615/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

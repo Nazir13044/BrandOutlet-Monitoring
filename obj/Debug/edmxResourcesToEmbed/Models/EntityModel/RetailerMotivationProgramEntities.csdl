@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RetailerMotivationProgramModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityType Name="Retailer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DistributorName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DistributorCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RetailerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RetailerAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MonthlyAverageSale" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MonthlyAverageSaleOfWalton" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="AddedDate" Type="DateTime" Nullable="false" Precision="7" />
+  </EntityType>
+  <EntityContainer Name="RetailerMotivationProgramEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Retailers" EntityType="Self.Retailer" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cc035d8a9678440697dd4ef6a81a9bf8" Name="Diagram1">
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.BrandShop" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.Content" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.tblBrandingMonitoringTeam" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.tblBrandingTeam" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.tblCreateAccount" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.tblImageUploader" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.BrandingIssue" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.BrandingIssuesSolved" Width="1.5" PointX="11.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.BrandIssueMaster" Width="1.5" PointX="3.375" PointY="10.75" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.tblLogin" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.BrandMonitorCategory" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.BrandMonitorSubCategory" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.BrandOutletDetail" Width="1.5" PointX="5.375" PointY="11.75" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.BrandOutletMaster" Width="1.5" PointX="11.375" PointY="11.75" />
+        <EntityTypeShape EntityType="BrandOutletMonitoringModel.BrandOutletLog" Width="1.5" PointX="11.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

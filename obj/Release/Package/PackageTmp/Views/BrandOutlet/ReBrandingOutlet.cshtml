@@ -1,0 +1,612 @@
+﻿
+@{
+    ViewBag.Title = "ReBrandingOutlet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .ui-autocomplete {
+        max-height: 200px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+        /* add padding to account for vertical scrollbar */
+        padding-right: 20px;
+    }
+
+    #tblAddedItems thead tr {
+        background-color: darkslategray;
+        color: whitesmoke;
+        font-weight: bold;
+    }
+
+    #tblAddedItems tbody tr {
+        color: #2F4F4F;
+        font-weight: bold;
+    }
+</style>
+<div class="row">
+    <div class="col-md-7 col-xs-7">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>RE-Branding Outlet</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <div class="form-horizontal form-label-left input_mask">
+
+
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Retailer Name</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtRetailerName" type="text" maxlength="100" placeholder="Type Name" required="" class="form-control form-control-success">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Retailer Address</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtRetailerAddress" type="text" maxlength="100" placeholder="Type Address" required="" class="form-control form-control-success">
+
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Retailer Phone</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtRetailerPhone" type="text" maxlength="100" placeholder="Type Address" required="" class="form-control form-control-success">
+
+
+                        </div>
+                    </div>
+
+                    @*<div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Brand Category</label>
+                        <div class="col-sm-7" id="">
+                            <input id="txtBrandCategory" type="text" maxlength="100" placeholder="Type Category" required="" class="form-control form-control-success">
+
+
+                        </div>
+
+                    </div>*@
+
+                    <div class="ln_solid"></div>
+                    @*<div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3 pull-right">
+
+                            <input type="button" id="btnAdd" value="Add" class="btn btn-primary">
+                        </div>
+                    </div>*@
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col-md-5 col-xs-5" id="divNewAddedItems" style="display: none;">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Brand Outlet Monitoring Sub Category</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" >
+                <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">Brand Category</label>
+                    <div class="col-sm-7" id="">
+                        <input id="txtBrandCategory" type="text" maxlength="100" placeholder="Type Category" required="" class="form-control form-control-success">
+
+                    </div>
+
+                </div>
+                <div class="x_content" id="divSubCategory">
+
+
+                </div>
+                <input type="button" id="btnAddNewItems" style="display: none" value="Add New Items" class="btn btn-primary pull-right">
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col-md-7 col-xs-7">
+        <div class="x_panel" id="divRebrandItems" style="display: none;">
+            <div class="x_title">
+                <h2>Added Data</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" id="divSubCategory" style="overflow: auto">
+
+
+                <table class=" table table-bordered table-hover" id="tblAddedItems">
+                <thead>
+                    <tr>
+                        <th style="">
+                            Category Id
+                        </th>
+                        <th>
+                            Category Name
+                        </th>
+                        <th>
+                            Sub Category Id
+                        </th>
+                        <th>
+                            Sub Category Name
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>Rebrand</th>
+
+                    </tr>
+                </thead>
+                <tbody class="tbody"></tbody>
+                </table>
+                <div class="form-group pull-right">
+                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+
+                        <input type="button" id="btnAddNew" value="Add New" class="btn btn-success">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col-md-5 col-xs-5">
+        <div class="x_panel" id="divNewRebrandItems" style="display: none;">
+            <div class="x_title">
+                <h2>Added Data</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+
+                    </li>
+                    
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content" id="divSubCategory" style="overflow: auto">
+
+
+                <table class="table table-bordered table-hover" id="tblNewAddedItems">
+                    <thead>
+                        <tr>
+                            <th style="">
+                                Category Id
+                            </th>
+                            <th>
+                                Category Name
+                            </th>
+                            <th>
+                                Sub Category Id
+                            </th>
+                            <th>
+                                Sub Category Name
+                            </th>
+                            <th>
+                                Quantity
+                            </th>
+                            <th>
+                                Action
+                            </th>
+                            
+
+                        </tr>
+                    </thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+               
+
+
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col-md-9 col-sm-9 col-xs-12 pull-left" >
+
+        <input type="button" id="btnSaveRebrand" value="Submit Re-Branding Data" class="btn btn-success pull-left" style="display: none">
+    </div>  
+
+</div>
+
+
+
+
+<input type="hidden" name="hdretailerId" id="hdretailerId" />
+<input type="hidden" name="hdbrandId" id="hdbrandId" />
+<input type="hidden" name="hdbrandoutletToken" id="hdbrandoutletToken" />
+
+<link href="~/Plugins/vendors/JqueryChoosen/chosen-bootstrap.css" rel="stylesheet" />
+<link href="~/Plugins/vendors/JqueryChoosen/chosen.css" rel="stylesheet" />
+<link href="~/Plugins/vendors/izitoast/iziToast.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="~/Plugins/vendors/jquery/dist/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="~/Plugins/vendors/chosen.jquery.js"></script>
+<script src="~/Plugins/vendors/izitoast/iziToast.min.js"></script>
+
+
+<script>
+    
+
+
+
+    $('#txtRetailerName').autocomplete({
+        source: "@Url.Action("GetOutetRetailers", "BrandOutlet")",
+        minLength: 2,
+        select: function(event, ui) {
+
+            $("#txtRetailerAddress").val(ui.item.Address);
+            $("#txtRetailerPhone").val(ui.item.Phone);
+            $("#hdretailerId").val(ui.item.Id);
+            $("#hdbrandoutletToken").val(ui.item.Token);
+
+            GetBrandOutletDetails(ui.item.Token);
+
+        }
+    });
+
+
+    function GetBrandOutletDetails(token) {
+
+
+        $.ajax({
+            url: '  @Url.Action("BrandOutletDetails", "BrandOutlet")',
+            type: 'GET',
+            data: { token: token },
+            dataType: 'json',
+            async: false,
+            contentType: 'application/json',
+            success: function (data) {
+               
+                var html = '';
+                if (data.length == 0) {
+                    iziToast.warning({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'warning',
+                        message: 'No Data Found'
+                    });
+                    return false;
+                } else {
+
+                    $.each(data, function (index, itemData) {
+
+                        //var line = itemData.LineName.slice(-1);
+                        $("#divRebrandItems").show();
+                        $("#btnSaveRebrand").show();
+                        
+                        html += '<tr>';
+                        html += '<td style="color: #132876;text-align:left;">' +itemData.BrandCategoryId + '</td>';
+                        html += '<td style="color: #941AB5;">' + itemData.BrandCategoryName + '</td>';
+                        html += '<td style="color: #881128;">' + itemData.BrandSubCategoryId + '</td>';
+                        html += '<td style="color: #097A17;">' + itemData.BrandSubCategoryName + '</td>';
+                        html += '<td style="color:red;">' + itemData.Quantity + '</td>';
+                       
+                        html += '<td style="color:#0E6251;"><input type="checkbox" style="font-size:12px;"  name="recheck" value=""></td>';
+                        html += '</tr>';
+
+
+
+                    });
+
+                    $('#tblAddedItems tbody').html(html);
+                }
+
+
+            },
+            error: function (result, textStatus, jqXHR) {
+                //toastr.error(result.Message);
+                // alert("Error");
+                return false;
+            }
+        });
+
+    }
+
+
+    $('#txtBrandCategory').autocomplete({
+        source: "@Url.Action("GetBrandCategoryDetails", "BrandOutlet")",
+        minLength: 3,
+        select: function(event, ui) {
+
+            $("#hdbrandId").val(ui.item.Id);
+
+            GetBrandSubCategories(ui.item.Id);
+        }
+    });
+
+    function GetBrandSubCategories(id) {
+
+        $.ajax({
+            url: '  @Url.Action("GetBrandSubCategory", "BrandOutlet")',
+            type: 'GET',
+            data: { id: id },
+            dataType: 'json',
+            async: false,
+            contentType: 'application/json',
+            success: function(data) {
+                if (data.length == 0) {
+                    $('#divSubCategory').empty();
+                    $('#divSubCategory').append('<div class="statistic d-flex align-items-center bg-white has-shadow" ><div class="icon bg-green"><i class="fa fa-calendar-o"></i></div><div class="text"><small>No data available</small></div></div>');
+
+                    return false;
+                } else {
+                    
+                    $('#btnAddNewItems').show();
+                    $('#divSubCategory').empty();
+                    $.each(data, function(index, itemData) {
+
+                        $("#divSubCategory").append('<div class="col-md-6" style="font-size:12px;><form><div class="form-check"><label><input type="checkbox" style="font-size:12px;"  name="subcategory" value="' + itemData.Id + '"> <span class="label-text">' + itemData.Name + '</span></label></div></form> </div>');
+                    });
+
+                }
+
+            },
+            error: function(result, textStatus, jqXHR) {
+                //toastr.error(result.Message);
+                // alert("Error");
+                return false;
+            }
+        });
+
+    }
+    $("body").on("click", ".remove", function () {
+
+        $(this).closest("tr").remove();
+
+    });
+
+    $("#btnAddNew").click(function() {
+        $('#divNewAddedItems').show();
+
+    });
+    
+    $("#btnAddNewItems").click(function () {
+
+        var checkedNum = $('input[name="subcategory"]:checked').length;
+
+
+        if (!checkedNum) {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Please Select Sub Categories'
+            });
+            return false;
+        } else {
+
+            $("#divNewRebrandItems").show();
+            $.each($("input[name='subcategory']:checked"), function () {
+
+                //alert($(this).val());
+                var row = "<tr class='active' style='font-size=5px;height:3px;color:black;'>" +
+ "<td style='height:5px;' class='text-center'>" + $("#hdbrandId").val() + "</td>" +
+"<td style='height:5px;' class='text-center'>" + $('#txtBrandCategory').val() + "</td>" +
+ "<td style='height:5px;' class='text-center'>" + $(this).val() + "</td>" +
+ "<td style='height:5px;' class='text-center'>" + $(this).next("span").text() + "</td>" +
+"<td style='height:3px;width:20px;' class='text-center'><input type='number' min='0' style='width:40px;'class='quantity' name='quantity' value='1'></td>" +
+    "<td><button type='button' class='btn btn-danger remove'>remove</button></td>" +
+                             "</tr>";
+
+
+                $('#tblNewAddedItems tbody').append(row);
+
+            });
+            //$('#btnClear').show();
+
+            $('input[name="subcategory"]').prop('checked', false);
+        }
+
+
+    });
+
+
+    $("#btnSaveRebrand").click(function() {
+
+
+        var checkedNum = $('input[name="recheck"]:checked').length;
+        var reBrandItems = [];
+        
+        var newBrandItems = [];
+
+        if (!checkedNum) {
+            iziToast.warning({
+                timeout: 1000,
+                imageWidth: 150,
+                position: 'center',
+                title: 'Warning',
+                message: 'Please SCheck'
+            });
+            return false;
+
+        } else {
+            $('#tblAddedItems  tbody').find("tr").each(function (row, tr) {
+                
+                if ($(tr).find('input[name="recheck"]').is(':checked')) {
+                   
+
+
+                    reBrandItems.push({
+                        Token: $("#hdbrandoutletToken").val(),
+                        RetailerId: $("#hdretailerId").val(),
+                        BrandCategoryId: $(tr).find('td:eq(0)').text(),
+                        BrandCategoryName: $(tr).find('td:eq(1)').text(),
+                        BrandSubCategoryId: $(tr).find('td:eq(2)').text(),
+                        BrandSubCategoryName: $(tr).find('td:eq(3)').text(),
+                        Quantity: $(tr).find('td:eq(4)').text(),
+                        Type: "RENEW"
+
+                    });
+
+                }
+
+
+
+            });
+
+            //console.log(reBrandItems);
+            //return false;
+            
+
+            var rowCount = $('#tblNewAddedItems >tbody >tr').length;
+            
+
+            if (rowCount > 0) {
+                
+                $('#tblNewAddedItems  tbody').find("tr").each(function (row, tr) {
+
+                    newBrandItems.push({
+                    Token: $("#hdbrandoutletToken").val(),
+                    RetailerId: $("#hdretailerId").val(),
+                    BrandCategoryId: $(tr).find('td:eq(0)').text(),
+                    BrandCategoryName: $(tr).find('td:eq(1)').text(),
+                    BrandSubCategoryId: $(tr).find('td:eq(2)').text(),
+                    BrandSubCategoryName: $(tr).find('td:eq(3)').text(),
+                    Quantity:$(tr).find('input[name="quantity"]').val(),
+                    Type: "NEW"
+
+                });
+
+                });
+
+            }
+            
+
+
+
+            ///Ajax Performmmmmm//////////////
+
+
+            $.ajax({
+                url: ' @Url.Action("InsertReBrandOutletInfo", "BrandOutlet")',
+                type: 'Post',
+                data: JSON.stringify({ reBrandItems: reBrandItems, newBrandItems: newBrandItems }),
+                dataType: 'json',
+                async: false,
+                cache: false,
+                contentType: 'application/json',
+                success: function (result) {
+
+                    if (result.IsSuccess) {
+                        iziToast.success({
+                            timeout: 2000,
+                            imageWidth: 150,
+                            position: 'center',
+                            title: 'Success',
+                            message: 'Re-Branded Successfully'
+                        });
+                        AllClear();
+                        reBrandItems = [];
+                        newBrandItems = [];
+                      
+                        
+                        return true;
+
+                    }
+                    else if (result.Id == "0") {
+                        window.location = '@Url.Action("LogOut", "Account")';
+
+                    }
+                    else {
+                        //$('#img').hide();
+                        iziToast.error({
+                            timeout: 2000,
+                            imageWidth: 150,
+                            position: 'center',
+                            title: 'Error',
+                            message: result.Message
+                        });
+
+
+                    }
+
+                },
+
+                error: function (result, textStatus, jqXHR) {
+                    iziToast.error({
+                        timeout: 2000,
+                        imageWidth: 150,
+                        position: 'center',
+                        title: 'Error',
+                        message: result.Message
+                    });
+
+                    //return false;
+                }
+            });
+        }
+
+
+    });
+    
+    function AllClear() {
+        
+        $("#divNewRebrandItems").hide();
+        $('#divNewAddedItems').hide();
+        $('#divSubCategory').empty();
+        $("#divRebrandItems").hide();
+        $("#btnSaveRebrand").hide();
+        $("#hdbrandId").val('');
+        $('#tblNewAddedItems tbody').empty();
+        $('#tblAddedItems tbody').empty();
+        $("#txtRetailerAddress").val('');
+        $("#txtRetailerPhone").val('');
+        $("#hdretailerId").val('');
+        $("#hdbrandoutletToken").val('');
+
+       
+
+    }
+
+</script>

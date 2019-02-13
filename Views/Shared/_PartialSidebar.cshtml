@@ -1,0 +1,41 @@
+﻿ <!-- sidebar menu -->
+@using Microsoft.Ajax.Utilities
+@using WCMS_MAIN.Models
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+    <div class="menu_section">
+        <h3>DashBoard</h3>
+        <ul class="nav side-menu">
+           @if (Session["MenuMaster"] != null)
+           {
+
+
+               var menuMaster = (List<MenuModel>)Session["MenuMaster"];
+               var groupByMenu = menuMaster.GroupBy(x => x.MainMenuName).ToList();
+
+               foreach (var MenuList in groupByMenu)
+               {
+
+                   var urlLink = (MenuList.Key).Replace(" ", "");
+                   
+                   <li>
+                <a><i class="fa fa-edit"></i> @MenuList.Key <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    
+                    @foreach (var subMenuList in MenuList)
+                    {
+                        
+                         <li><a href="@Url.Action(subMenuList.ActionName, subMenuList.ControllerName)">@subMenuList.SubMenuName</a></li>
+                    }
+
+
+                </ul>
+            </li>
+           
+               }
+           }
+
+
+        </ul>
+    </div>
+</div>
